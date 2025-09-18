@@ -31,56 +31,25 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **O gerenciamento do controle de medicamentos representa um desafio tanto em ambientes hospitalares quanto no cotidiano domiciliar. A dificuldade de organizar, acompanhar e garantir o uso correto dos remédios prescritos leva a situações recorrentes de esquecimento de horários, confusão nas dosagens e abandono do tratamento antes do prazo recomendado. Em instituições de saúde, essa falta de controle pode gerar desperdício de insumos, erros de administração e, principalmente, riscos à segurança do paciente. Já em casa, as consequências vão desde o agravamento de doenças até reações adversas e desenvolvimento de dependências. Outro ponto crítico é a ausência de registros claros e acessíveis, que dificulta a comunicação eficiente entre médicos, pacientes e cuidadores. Esse conjunto de problemas evidencia a necessidade de soluções que assegurem disciplina, precisão e confiabilidade no uso dos medicamentos.**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+
 
 ## Objetivos
 
 **O projeto tem como objetivo central desenvolver mecanismos capazes de melhorar a gestão do uso de medicamentos em diferentes contextos, com foco na segurança, eficiência e adesão ao tratamento. Entre os objetivos específicos, destacam-se: Criar ferramentas que auxiliem na organização de horários e dosagens de forma intuitiva e acessível;Reduzir falhas humanas, como esquecimentos e confusões, por meio de recursos automatizados;Contribuir para a redução de desperdícios de medicamentos e custos relacionados a internações ou complicações decorrentes do mau uso;Promover maior autonomia e tranquilidade para os pacientes e familiares durante o processo de tratamento.**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+
 
 ## Justificativa
 
 **A justificativa para este projeto se apoia na relevância social e na necessidade de promover segurança em um processo vital para a saúde pública: a administração correta de medicamentos. A falta de controle adequado é um problema recorrente e de grande impacto, tanto em termos de qualidade de vida dos pacientes quanto nos custos financeiros de instituições de saúde. Ao desenvolver soluções que otimizem esse processo, é possível prevenir erros, evitar complicações médicas, reduzir desperdícios e melhorar a adesão ao tratamento. Além disso, a implementação de um sistema de gerenciamento de medicamentos contribui para uma assistência mais humanizada, transparente e confiável, alinhando tecnologia e cuidado à saúde.**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+
 
 ## Público-Alvo
 
 **O público-alvo do projeto é amplo e diversificado. Em primeiro lugar, incluem-se os pacientes que utilizam medicamentos de forma contínua ou em tratamentos específicos, especialmente idosos, pessoas com doenças crônicas e indivíduos polimedicados. Também são beneficiados os familiares e cuidadores responsáveis por acompanhar esses tratamentos, que passam a contar com ferramentas de apoio para evitar falhas. Além disso, instituições de saúde — hospitais, clínicas e farmácias — se beneficiam ao integrar processos mais seguros e eficientes. Por fim, médicos e outros profissionais da saúde ganham suporte para monitorar o uso dos medicamentos de forma mais clara e precisa, fortalecendo a relação entre prescritor e paciente.**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
 
 # Product Discovery
 
