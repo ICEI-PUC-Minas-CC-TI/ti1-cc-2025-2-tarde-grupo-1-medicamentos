@@ -2,13 +2,14 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
+* **Projeto:** Gerenciament e Controle de Medicamentos
 * **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Savyo Henio Martins Teixeira](https://github.com/SavyoMartinsTeixeira)
+  * [Kaio Ferreira Dias](https://github.com/KaioT2/KaioT2)
+  * [Gabriel Lucas Brasileiro Zacarias](https://github.com/glbz71)
+  * [Thiago Ferreira Santos de Deus](https://github.com/thiguizs)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -28,7 +29,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**O gerenciamento do controle de medicamentos representa um desafio tanto em ambientes hospitalares quanto no cotidiano domiciliar. A dificuldade de organizar, acompanhar e garantir o uso correto dos remédios prescritos leva a situações recorrentes de esquecimento de horários, confusão nas dosagens e abandono do tratamento antes do prazo recomendado. Em instituições de saúde, essa falta de controle pode gerar desperdício de insumos, erros de administração e, principalmente, riscos à segurança do paciente. Já em casa, as consequências vão desde o agravamento de doenças até reações adversas e desenvolvimento de dependências. Outro ponto crítico é a ausência de registros claros e acessíveis, que dificulta a comunicação eficiente entre médicos, pacientes e cuidadores. Esse conjunto de problemas evidencia a necessidade de soluções que assegurem disciplina, precisão e confiabilidade no uso dos medicamentos.**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -42,7 +43,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**O projeto tem como objetivo central desenvolver mecanismos capazes de melhorar a gestão do uso de medicamentos em diferentes contextos, com foco na segurança, eficiência e adesão ao tratamento. Entre os objetivos específicos, destacam-se: Criar ferramentas que auxiliem na organização de horários e dosagens de forma intuitiva e acessível;Reduzir falhas humanas, como esquecimentos e confusões, por meio de recursos automatizados;Contribuir para a redução de desperdícios de medicamentos e custos relacionados a internações ou complicações decorrentes do mau uso;Promover maior autonomia e tranquilidade para os pacientes e familiares durante o processo de tratamento.**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -54,7 +55,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**A justificativa para este projeto se apoia na relevância social e na necessidade de promover segurança em um processo vital para a saúde pública: a administração correta de medicamentos. A falta de controle adequado é um problema recorrente e de grande impacto, tanto em termos de qualidade de vida dos pacientes quanto nos custos financeiros de instituições de saúde. Ao desenvolver soluções que otimizem esse processo, é possível prevenir erros, evitar complicações médicas, reduzir desperdícios e melhorar a adesão ao tratamento. Além disso, a implementação de um sistema de gerenciamento de medicamentos contribui para uma assistência mais humanizada, transparente e confiável, alinhando tecnologia e cuidado à saúde.**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -68,7 +69,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**O público-alvo do projeto é amplo e diversificado. Em primeiro lugar, incluem-se os pacientes que utilizam medicamentos de forma contínua ou em tratamentos específicos, especialmente idosos, pessoas com doenças crônicas e indivíduos polimedicados. Também são beneficiados os familiares e cuidadores responsáveis por acompanhar esses tratamentos, que passam a contar com ferramentas de apoio para evitar falhas. Além disso, instituições de saúde — hospitais, clínicas e farmácias — se beneficiam ao integrar processos mais seguros e eficientes. Por fim, médicos e outros profissionais da saúde ganham suporte para monitorar o uso dos medicamentos de forma mais clara e precisa, fortalecendo a relação entre prescritor e paciente.**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
