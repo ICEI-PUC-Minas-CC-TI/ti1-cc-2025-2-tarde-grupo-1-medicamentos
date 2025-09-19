@@ -168,51 +168,23 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-[HomePage](docs/images/wirefram/Home_page.png)
-[Lembretes](docs/images/wirefram/Lembretes.png)
-[Notificações](docs/images/wirefram/Notificações.png)
-[Cadastro](docs/images/wirefram/cadastro.png)
-[Avaliação](docs/images/wirefram/avaliação.png)
-[CadastroRemedio](docs/images/wirefram/Cadastro_medicamentos.png)
-[Remedios](docs/images/wirefram/Remedios.png)
-[Entidaes](docs/images/wirefram/Entidade.png)
-[Pesquisa](docs/images/wirefram/pesquisa.png)
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+![HomePage](docs/images/wirefram/Home_page.png)
+![Lembretes](docs/images/wirefram/Lembretes.png)
+![Notificações](docs/images/wirefram/Notificações.png)
+![Cadastro](docs/images/wirefram/cadastro.png)
+![Avaliação](docs/images/wirefram/avaliação.png)
+![CadastroRemedio](docs/images/wirefram/Cadastro_medicamentos.png)
+![Remedios](docs/images/wirefram/Remedios.png)
+![Entidaes](docs/images/wirefram/Entidade.png)
+![Pesquisa](docs/images/wirefram/pesquisa.png)
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![UserFlow Medicamentos](docs/images/PrototipoMedicamentos.png)
 
 ### Protótipo Interativo
 
-[Protótipo Interativo (Figma)](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
+![Protótipo Interativo (Figma)](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
 
 # Metodologia
 
