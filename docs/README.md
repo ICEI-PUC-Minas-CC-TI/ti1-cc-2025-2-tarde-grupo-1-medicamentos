@@ -56,14 +56,14 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Etapa de Entendimento
 
-[Etapa de entendimento](docs/images/Entendimento.pdf)
+[Etapa de entendimento](./images/Entendimento.pdf)
 
 ## Etapa de Definição
 
 ### Personas
 
-[Persona 1](docs/images/JoanaLight.png)
-[Persona 2](docs/images/carlos.png)
+![Persona 1](./images/JoanaLight.png)
+![Persona 2](./images/carlos.png)
 
 # Product Design
 
@@ -123,8 +123,8 @@ Para: ter tempo hábil de planejar a compra de uma nova caixa, sem o risco de fi
 
 ## Proposta de Valor
 
-[Persona 1](docs/images/MapaDeValorP1.png)
-[Persona 2](docs/images/MapaDeValorP2.png)
+![Persona 1](./images/MapaDeValorP1.png)
+![Persona 2](./images/MapaDeValorP2.png)
 
 
 ## Requisitos
@@ -168,23 +168,23 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-![HomePage](docs/images/wirefram/Home_page.png)
-![Lembretes](docs/images/wirefram/Lembretes.png)
-![Notificações](docs/images/wirefram/Notificações.png)
-![Cadastro](docs/images/wirefram/cadastro.png)
-![Avaliação](docs/images/wirefram/avaliação.png)
-![CadastroRemedio](docs/images/wirefram/Cadastro_medicamentos.png)
-![Remedios](docs/images/wirefram/Remedios.png)
-![Entidaes](docs/images/wirefram/Entidade.png)
-![Pesquisa](docs/images/wirefram/pesquisa.png)
+![HomePage](./images/wirefram/Home_page.png)
+![Lembretes](./images/wirefram/Lembretes.png)
+![Notificações](./images/wirefram/Notificações.png)
+![Cadastro](./images/wirefram/cadastro.png)
+![Avaliação](./images/wirefram/avaliação.png)
+![CadastroRemedio](./images/wirefram/Cadastro_medicamentos.png)
+![Remedios](./images/wirefram/Remedios.png)
+![Entidaes](./images/wirefram/Entidade.png)
+![Pesquisa](./images/wirefram/pesquisa.png)
 
 ### User Flow
 
-![UserFlow Medicamentos](docs/images/PrototipoMedicamentos.png)
+![UserFlow Medicamentos](./images/PrototipoMedicamentos.png)
 
 ### Protótipo Interativo
 
-![Protótipo Interativo (Figma)](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
+[Prototipo Interativo](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
 
 # Metodologia
 
