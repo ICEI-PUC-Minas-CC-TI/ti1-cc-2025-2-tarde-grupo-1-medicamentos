@@ -167,8 +167,15 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
-
+[HomePage](docs/images/wirefram/Home_page.png)
+[Lembretes](docs/images/wirefram/Lembretes.png)
+[Notificações](docs/images/wirefram/Notificações.png)
+[Cadastro](docs/images/wirefram/cadastro.png)
+[Avaliação](docs/images/wirefram/avaliação.png)
+[CadastroRemedio](docs/images/wirefram/Cadastro_medicamentos.png)
+[Remedios](docs/images/wirefram/Remedios.png)
+[Entidaes](docs/images/wirefram/Entidade.png)
+[Pesquisa](docs/images/wirefram/pesquisa.png)
 ##### TELA XPTO ⚠️ EXEMPLO ⚠️
 
 Descrição para a tela XPTO
