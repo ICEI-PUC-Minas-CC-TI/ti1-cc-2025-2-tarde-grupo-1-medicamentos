@@ -55,58 +55,76 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Etapa de Entendimento
 
-**docs/images/Entendimento.pdf**
+[Etapa de entendimento](docs/images/Entendimento.pdf)
 
 ## Etapa de Definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+[Persona 1](docs/images/JoanaLight.png)
+[Persona 2](docs/images/carlos.png)
 
 # Product Design
 
 Nesse momento, vamos transformar os insights e validações obtidos em soluções tangíveis e utilizáveis. Essa fase envolve a definição de uma proposta de valor, detalhando a prioridade de cada ideia e a consequente criação de wireframes, mockups e protótipos de alta fidelidade, que detalham a interface e a experiência do usuário.
 
 ## Histórias de Usuários
+Joana - Lembretes de Horários e Doses
+Eu como: Depende de lembretes para organizar meus remédios.
+Quero: Receber notificações no celular sobre os horários e dosagens dos meus remédios.
+Porque/para: Não esquecer de tomar meus medicamentos corretamente e manter meu tratamento em dia.
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
+Joana - Gestão Integrada de Consultas
+Eu como: Uma paciente que precisa conciliar o controle de medicamentos com um cronograma de consultas médicas regulares,
+Preciso de: Integrar meus agendamentos de consultas no mesmo calendário dos meus remédios, recebendo lembretes para ambos os compromissos.
+Para: Ter uma visão unificada e centralizada de toda a minha agenda de saúde, evitando conflitos de horário e garantindo que eu não perca nenhuma consulta de acompanhamento importante.
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
+Joana - Diferenciação Visual de Medicamentos
+Eu como: Pessoa que tem dificuldade em diferenciar remédios.
+Quero: Visualizar imagens e descrições dos medicamentos no site.
+Porque/para: Evitar confusões e tomar sempre o remédio correto.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+Joana - Gestão Detalhada de Múltiplos Medicamentos
+Eu como: Um paciente que faz uso de múltiplos medicamentos contínuos,
+Preciso de: Agendar alarmes personalizados para cada remédio, com a possibilidade de incluir uma foto do medicamento e a dosagem correta.
+Para: Garantir que eu tome a medicação certa, na hora e na quantidade exatas, evitando esquecimentos ou confusões que podem prejudicar meu tratamento.
+Joana - Busca Urgente de Medicamentos para Terceiros
+Eu como: Uma pessoa cuidando de um familiar doente,
+Preciso de: Buscar um medicamento específico e ver no mapa quais as farmácias mais próximas que possam ter.
+Para: Economizar tempo e evitar o transtorno de ir a vários locais até encontrar o remédio de que preciso com urgência.
+
+Joana - Busca por Especialistas Médicos
+Eu como: Um usuário que se mudou recentemente para um novo bairro.
+Preciso de: Uma plataforma para buscar especialistas médicos e ler avaliações de outros pacientes.
+Para: Encontrar um profissional de saúde confiável de forma rápida e segura.
+
+Carlos - Comparação de Preços
+Eu como: um usuário com orçamento limitado que faz uso de medicamentos de forma recorrente,
+Preciso de: uma ferramenta que compare e classifique os preços de um mesmo remédio nas farmácias ao meu redor.
+Para: conseguir encontrar a opção mais barata facilmente e economizar dinheiro no meu tratamento.
+
+Carlos - Lembrete de Saída (Lembrar de levar os remédios)
+Eu como: um profissional que passa o dia fora e precisa tomar remédios no trabalho,
+Preciso de: receber uma notificação inteligente ao sair de casa me lembrando de pegar os medicamentos necessários para o dia.
+Para: evitar esquecê-los e garantir a continuidade do meu tratamento mesmo com a rotina corrida.
+
+ Carlos - Identificação Visual para Evitar Confusão
+Eu como: um paciente polimedicado que se confunde com comprimidos de aparência parecida,
+Preciso de: um catálogo digital no aplicativo que mostre fotos, cores e características de cada um dos meus remédios.
+Para: poder identificar e diferenciar os medicamentos com segurança, evitando o risco de tomar a pílula errada.
+
+Título: Carlos - Alerta de Estoque Baixo
+Eu como: um paciente que realiza um tratamento contínuo e não pode interrompê-lo.
+Preciso de: registrar a quantidade de comprimidos que possuo e receber um alerta automático quando a minha caixa de remédios estiver perto de acabar.
+Para: ter tempo hábil de planejar a compra de uma nova caixa, sem o risco de ficar sem minha medicação.
+
+
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+[Persona 1](docs/images/MapaDeValorP1.png)
+[Persona 2](docs/images/MapaDeValorP2.png)
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
-
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
 
 ## Requisitos
 
@@ -114,33 +132,32 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                                   | Prioridade |
+| ID     | Descrição do Requisito                                     | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | Notificação visual/sonora para saber horario e dosagem     | Alta       |
+| RF-002 | Cadastro,listagem e edição de medicamentos                 | Media      |
+| RF-003 | Cadastro,listagem e edição de medicaos                     | Media      |
+| RF-004 | Busca de medicamentos                                      | Baixa      |
+| RF-005 | Lembretes personalizadas                                   | Alta       |
+| RF-006 | Filtro de medicamentos de preferencia                      | Baixa      |
+| RF-007 | Alerta para quando um remedio cadastrado estiver acabando  | Alta       |
+| RF-008 | Sistema para favoritar remedio para facilidade em achar    | Baixa      |
+| RF-009 | Login/Cadastro                                             | Alta       |
+| RF-010 | Permitir avaliação dos medicos                             | Baixa      |
 
 ### Requisitos não Funcionais
 
-| ID      | Descrição do Requisito                                                              | Prioridade |
-| ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| ID      | Descrição do Requisito                                    | Prioridade |
+| ------- | --------------------------------------------------------- | ---------- |
+| RNF-001 | Site deve estar o tempo todo no AR                        | MÉDIA      |
+| RNF-002 | O sistema deve ser responsivo para celular, tablet e PC   | MÉDIA      |
+| RNF-003 | Armazenamento que garanta privacidade dos ursuarios       | MÉDIA      |
+| RNF-004 | Desenvolvido utilizando HTML, CSS e JSon                  | MÉDIA      |
+| RNF-005 | Ser publicado em um ambiente acessícivel na Internet      | MÉDIA      |
+| RNF-006 | O site deve ter usabilidade intuitiva                     | MÉDIA      |
+| RNF-007 | Deve permitir atualização sem perca de dados              | MÉDIA      |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+
 
 ## Projeto de Interface
 
@@ -203,13 +220,13 @@ Detalhes sobre a organização do grupo e o ferramental empregado.
 
 Relação de ferramentas empregadas pelo grupo durante o projeto.
 
-| Ambiente                    | Plataforma | Link de acesso                                     |
-| --------------------------- | ---------- | -------------------------------------------------- |
+| Ambiente                    | Plataforma | Link de acesso                                 |
+| --------------------------- | ---------- | ---------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
+| Repositório de código       | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
-|                             |            |                                                    |
+| Protótipo Interativo        | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+|                             |            |                                                |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
