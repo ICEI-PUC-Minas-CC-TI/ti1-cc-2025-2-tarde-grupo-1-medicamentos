@@ -1,13 +1,13 @@
 # Nome do projeto
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+ **O projeto tem como objetivo central desenvolver mecanismos capazes de melhorar a gestão do uso de medicamentos em diferentes contextos, com foco na segurança, eficiência e adesão ao tratamento. Entre os objetivos específicos, destacam-se: Criar ferramentas que auxiliem na organização de horários e dosagens de forma intuitiva e acessível;Reduzir falhas humanas, como esquecimentos e confusões, por meio de recursos automatizados;Contribuir para a redução de desperdícios de medicamentos e custos relacionados a internações ou complicações decorrentes do mau uso;Promover maior autonomia e tranquilidade para os pacientes e familiares durante o processo de tratamento.**
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Savyo Henio Martins Teixeira
+* Kaio Ferreira Dias
+* Gabriel Lucas Brasileiro Zacarias
+* Thiago Ferreira Santos de Deus
 
 ## Professores responsáveis
 

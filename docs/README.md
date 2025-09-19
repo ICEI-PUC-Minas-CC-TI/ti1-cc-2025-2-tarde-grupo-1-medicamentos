@@ -3,7 +3,7 @@
 Informações básicas do projeto.
 
 * **Projeto:** Gerenciament e Controle de Medicamentos
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Repositório GitHub:** [LinkGitHub](https://github.com/ICEI-PUC-Minas-CC-TI/ti1-cc-2025-2-tarde-grupo-1-medicamentos.git)
 * **Membros da equipe:**
 
   * [Savyo Henio Martins Teixeira](https://github.com/SavyoMartinsTeixeira)
