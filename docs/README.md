@@ -214,11 +214,7 @@ Descrição para a tela XPTO
 
 **✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
+[Protótipo Interativo (Figma)](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
 
 # Metodologia
 
