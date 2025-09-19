@@ -10,6 +10,7 @@ Informações básicas do projeto.
   * [Kaio Ferreira Dias](https://github.com/KaioT2/KaioT2)
   * [Gabriel Lucas Brasileiro Zacarias](https://github.com/glbz71)
   * [Thiago Ferreira Santos de Deus](https://github.com/thiguizs)
+  * [Francielle de Souza Lana](https://github.com/franciellelana00-del)
 
 A documentação do projeto é estruturada da seguinte forma:
 

@@ -8,6 +8,7 @@
 * Kaio Ferreira Dias
 * Gabriel Lucas Brasileiro Zacarias
 * Thiago Ferreira Santos de Deus
+* Francielle de Souza Lana
 
 ## Professores responsáveis
 
