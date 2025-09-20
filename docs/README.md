@@ -137,7 +137,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ------ | ---------------------------------------------------------- | ---------- |
 | RF-001 | Notificação visual/sonora para saber horário e dosagem     | Alta       |
 | RF-002 | Cadastro,listagem e edição de medicamentos                 | Media      |
-| RF-003 | Cadastro,listagem e edição de medicação                    | Media      |
+| RF-003 | Cadastro,listagem e edição de médicos                      | Media      |
 | RF-004 | Busca de medicamentos                                      | Baixa      |
 | RF-005 | Lembretes personalizadas                                   | Alta       |
 | RF-006 | Filtro de medicamentos de preferencia                      | Baixa      |
