@@ -117,7 +117,7 @@ Para: poder identificar e diferenciar os medicamentos com segurança, evitando o
 Título: Carlos - Alerta de Estoque Baixo
 Eu como: um paciente que realiza um tratamento contínuo e não pode interrompê-lo.
 Preciso de: registrar a quantidade de comprimidos que possuo e receber um alerta automático quando a minha caixa de remédios estiver perto de acabar.
-Para: ter tempo hábil de planejar a compra de uma nova caixa, sem o risco de ficar sem minha medicação.
+Para: ter tempo hábito de planejar a compra de uma nova caixa, sem o risco de ficar sem minha medicação.
 
 
 
@@ -135,16 +135,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                     | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Notificação visual/sonora para saber horario e dosagem     | Alta       |
+| RF-001 | Notificação visual/sonora para saber horário e dosagem     | Alta       |
 | RF-002 | Cadastro,listagem e edição de medicamentos                 | Media      |
-| RF-003 | Cadastro,listagem e edição de medicaos                     | Media      |
+| RF-003 | Cadastro,listagem e edição de medicação                    | Media      |
 | RF-004 | Busca de medicamentos                                      | Baixa      |
 | RF-005 | Lembretes personalizadas                                   | Alta       |
 | RF-006 | Filtro de medicamentos de preferencia                      | Baixa      |
-| RF-007 | Alerta para quando um remedio cadastrado estiver acabando  | Alta       |
-| RF-008 | Sistema para favoritar remedio para facilidade em achar    | Baixa      |
+| RF-007 | Alerta para quando um remédio cadastrado estiver acabando  | Alta       |
+| RF-008 | Sistema para favoritar remédio para facilidade em achar    | Baixa      |
 | RF-009 | Login/Cadastro                                             | Alta       |
-| RF-010 | Permitir avaliação dos medicos                             | Baixa      |
+| RF-010 | Permitir avaliação dos médicos                             | Baixa      |
 
 ### Requisitos não Funcionais
 
@@ -152,9 +152,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ------- | --------------------------------------------------------- | ---------- |
 | RNF-001 | Site deve estar o tempo todo no AR                        | MÉDIA      |
 | RNF-002 | O sistema deve ser responsivo para celular, tablet e PC   | MÉDIA      |
-| RNF-003 | Armazenamento que garanta privacidade dos ursuarios       | MÉDIA      |
+| RNF-003 | Armazenamento que garanta privacidade dos usuários        | MÉDIA      |
 | RNF-004 | Desenvolvido utilizando HTML, CSS e JSon                  | MÉDIA      |
-| RNF-005 | Ser publicado em um ambiente acessícivel na Internet      | MÉDIA      |
+| RNF-005 | Ser publicado em um ambiente acessível na Internet        | MÉDIA      |
 | RNF-006 | O site deve ter usabilidade intuitiva                     | MÉDIA      |
 | RNF-007 | Deve permitir atualização sem perca de dados              | MÉDIA      |
 
