@@ -341,14 +341,8 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 # Referências
 
-As referências utilizadas no trabalho foram:
+SILVA, Anderson Lourenço da; RIBEIRO, Andréia Queiroz; KLEIN, Carlos Henrique; ACURCIO, Francisco de Assis. Cadernos de Saúde Pública, Rio de Janeiro, v. 28, n. 6, p. 1033–1045, jun. 2012. Disponível em: https://www.scielo.br/j/csp/a/pDL9xpBNsSgqFfFBGPPYZhH/?format=html&lang=pt
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
 > **Orientações**:
 >
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
