@@ -188,8 +188,11 @@ Estes são os protótipos de telas do sistema.
 
 # Metodologia
 Divisão de papéis: 
+
 Kaio e Thiago- Ptojeto de Interface. 
+
 Savyo e Gabriel- Documentação.
+
 Francielle- Slide.
 
 
