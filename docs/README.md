@@ -187,8 +187,11 @@ Estes são os protótipos de telas do sistema.
 [Prototipo Interativo](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
 
 # Metodologia
+Divisão de papéis: 
+Kaio e Thiago- Ptojeto de Interface. 
+Savyo e Gabriel- Documentação.
+Francielle- Slide.
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
 
 ## Ferramentas
 
