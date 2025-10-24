@@ -19,7 +19,9 @@ const router = jsonServer.router('./db/db.json')
   
 // Para permitir que os dados sejam alterados, altere a linha abaixo
 // colocando o atributo readOnly como false.
-const middlewares = jsonServer.defaults({ noCors: true })
+const cors = require('cors')
+server.use(cors())
+const middlewares = jsonServer.defaults()
 server.use(middlewares)
 server.use(router)
 
