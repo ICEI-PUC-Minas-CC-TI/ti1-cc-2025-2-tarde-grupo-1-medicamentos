@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #69B7BF;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+header>a>img {
+    width: 60px;
+}
+
+.icons-container img {
+    width: 30px;
+}
+
+.menu-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container>ul {
+    display: flex;
+    background-color: #69B7BF;
+    justify-content: center;
+}
+
+.menu-container a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    display: none;
+    z-index: 10;
+}
+
+.menu-item ul>li>a {
+    color: #69B7BF;
+}
+
+.menu-item:hover>ul {
+    display: block;
+    font-weight: 500;
+}
+
+.icons-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons-container img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icons-container p {
+    font-size: 17px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.banner-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-top: solid 2px #4f9ba3;
+    border-bottom: solid 2px #4f9ba3;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69B7BF;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+footer p {
+    color: white;
+}
