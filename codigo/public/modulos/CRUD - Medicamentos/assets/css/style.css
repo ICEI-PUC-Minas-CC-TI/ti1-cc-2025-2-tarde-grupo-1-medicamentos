@@ -147,6 +147,170 @@ main {
     border-bottom: solid 2px #4f9ba3;
 }
 
+.card-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container>a {
+    text-decoration: none;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-titles {
+    display: grid;
+    grid-template-columns: 50px 1.5fr 3fr 1fr 265px;
+    font-weight: 700;
+    padding-left: 10px;
+    gap: 15px;
+    align-items: center;
+}
+
+.t-horario,
+.t-nome,
+.t-dose {
+    margin-left: 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 10px;
+    background-color: #69B7BF;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50px 1.5fr 3fr 1fr;
+    gap: 15px;
+    padding-left: 0;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.horario,
+.nome,
+.dose {
+    width: auto;
+    text-align: left;
+}
+
+.buttons-card {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.check-area {
+    background-color: #ecfdff;
+    color: #ccc;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid 2px black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card button {
+    background-color: #ecfdff;
+    height: 32px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #fff;
+    color: #69B7BF;
+}
+
+.container-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e6e6e4;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    align-items: top;
+    gap: 30px;
+    justify-content: center;
+}
+
+#form-cadastro {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #69B7BF;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+#form-cadastro h2 {
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#form-cadastro input,
+select {
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#form-cadastro label {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#form-cadastro button {
+    font-weight: 700;
+    color: #fff;
+    height: 35px;
+    width: 100px;
+    background-color: #71dae6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#form-cadastro button:hover {
+    background-color: #ffffff;
+    color: #4f9ba3;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -159,7 +323,6 @@ footer {
 
 footer p {
     color: white;
-    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -212,5 +375,62 @@ footer p {
 
     header {
         flex-wrap: nowrap;
+    }
+
+    .card-titles {
+        display: none;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .content .horario::before {
+        content: "Horário: ";
+        font-weight: 700;
+        color: #e9f1f2;
+    }
+
+    .content .nome::before {
+        content: "Nome: ";
+        font-weight: 700;
+        color: #e9f1f2;
+    }
+
+    .content .dose::before {
+        content: "Dose: ";
+        font-weight: 700;
+        color: #e9f1f2;
+    }
+
+    .check-area {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .buttons-card {
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-container {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card button {
+        width: 70px;
+        font-size: 13px;
     }
 }
