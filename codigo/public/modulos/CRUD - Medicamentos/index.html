@@ -43,6 +43,11 @@
         <img src="./assets/images/sino.png" alt="notifications">
         <p>A</p>
     </div>
+    <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-linha"></span>
+        <span class="hamburger-linha"></span>
+        <span class="hamburger-linha"></span>
+    </button>
 </header>
     <main>
         <div class="banner-container">
@@ -58,5 +63,22 @@
 </body>
 
 <script src="./assets/js/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const btnHamburger = document.getElementById('btn-hamburger');
+        const navMenu = document.getElementById('nav-menu');
 
+        if (btnHamburger && navMenu) { 
+            btnHamburger.addEventListener('click', () => {
+                btnHamburger.classList.toggle('aberto');
+                
+                navMenu.classList.toggle('menu-aberto');
+                
+                const estaAberto = navMenu.classList.contains('menu-aberto');
+                btnHamburger.setAttribute('aria-expanded', estaAberto);
+            });
+        }
+    });
+</script>
 </html>
