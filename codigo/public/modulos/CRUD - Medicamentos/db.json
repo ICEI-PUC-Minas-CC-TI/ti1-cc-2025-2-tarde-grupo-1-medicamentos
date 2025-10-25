@@ -1,0 +1,28 @@
+{
+  "medicamentos": [
+    {
+      "nome": "Ibuprofeno 400mg",
+      "dose": "400mg",
+      "intervalo": "8 em 8 horas",
+      "dosePorEmbalagem": "20",
+      "status": "ativo",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "nome": "Amoxicilina 500mg",
+      "dose": "500mg",
+      "intervalo": "12 em 12 horas",
+      "dosePorEmbalagem": 21,
+      "status": "ativo"
+    },
+    {
+      "id": "5",
+      "nome": "Losartana 50mg",
+      "dose": "50mg",
+      "intervalo": "24 em 24 horas",
+      "dosePorEmbalagem": 30,
+      "status": "ativo"
+    }
+  ]
+}
