@@ -43,6 +43,7 @@
         <img src="./assets/images/sino.png" alt="notifications">
         <p>A</p>
     </div>
+
     <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span class="hamburger-linha"></span>
         <span class="hamburger-linha"></span>
@@ -50,10 +51,51 @@
     </button>
 </header>
     <main>
-        <div class="banner-container">
+        <!-- <div class="banner-container">
             <img src="./assets/images/banner.jpg" alt="banner">
-        </div>
+        </div> -->
     </main>
+
+    <div class="card-container">
+        <h1>Medicamentos do Dia</h1>
+        <div class="card-item">
+            <div class="card-titles">
+                <span class="t-check">Check</span>
+                <span class="t-horario">Horário</span>
+                <span class="t-nome">Nome</span>
+                <span class="t-dose">Dose</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="form-container">
+            <input type="hidden" id="edit-id">
+            <form id="form-cadastro">
+                <h2>Medicamento</h2>
+                <label for="intervalo">Nome do medicamento:</label>
+                <input type="text" id="nome" placeholder="Nome (ex: Paracetamol 750mg)" required>
+                <label for="intervalo">Dose:</label>
+                <input type="text" id="dose" placeholder="Dose (ex: 750mg)" required>
+                <label for="intervalo">Intervalo:</label>
+                <select id="intervalo" required>
+                    <option value="">Selecione o intervalo</option>
+                    <option value="3 em 3 horas">3 em 3 horas</option>
+                    <option value="6 em 6 horas">6 em 6 horas</option>
+                    <option value="8 em 8 horas">8 em 8 horas</option>
+                    <option value="12 em 12 horas">12 em 12 horas</option>
+                    <option value="1 vez ao dia">1 vez ao dia</option>
+                </select>
+                <label for="intervalo">Doses por embalagem:</label>
+                <input type="text" id="doseEmbalagem" placeholder="Doses por embalagem (ex: 2)" required>
+                <div class="container-buttons">
+                    <button type="submit" id="btn-submit">Cadastrar</button>
+                </div>
+            </form>
+
+            <!-- <a href="./index.html">
+                <button type="button">Voltar</button>
+            </a> -->
+        </section>
 
     <footer>
         <p>
@@ -65,7 +107,7 @@
 <script src="./assets/js/script.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        
+
         const btnHamburger = document.getElementById('btn-hamburger');
         const navMenu = document.getElementById('nav-menu');
 
@@ -81,4 +123,5 @@
         }
     });
 </script>
+
 </html>
