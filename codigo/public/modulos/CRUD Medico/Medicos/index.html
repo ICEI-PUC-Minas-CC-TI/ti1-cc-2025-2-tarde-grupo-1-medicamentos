@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuidaMed</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./assets/images/logoTI.png" alt="cuidaMedIcon">
+        </a>
+
+        <nav class="menu-container" id="nav-menu">
+            <ul>
+                <li class="menu-item"><a href="#">Inicio</a></li>
+                <li class="menu-item"><a href="#">Cadastros</a>
+                    <ul>
+                        <li><a href="#">Médicos</a></li>
+                        <li><a href="#">Pacientes</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Consultas</a>
+                    <ul>
+                        <li><a href="#">Agendar</a></li>
+                        <li><a href="#">Histórico</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Menu do Usuário</a>
+                    <ul>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons-container">
+            <img src="/Medicos//assets/images/lupa (1).png" alt="search">
+            <img src="/Medicos//assets/images/sino.png" alt="notifications">
+            <p>A</p>
+        </div>
+
+        <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+        </button>
+    </header>
+
+    <main>
+        <!-- <div class="banner-container">
+            <img src="./assets/images/banner.jpg" alt="banner">
+        </div> -->
+    </main>
+
+    <div class="card-container">
+        <h1>Seus Profissionais</h1>
+        <div class="card-item">
+            <div class="card-titles">
+                <span class="t-nome">Nome</span>
+                <span class="t-idade">Idade</span>
+                <span class="t-contato">Contato</span>
+                <span class="t-especialidade">Especialidade</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="form-container">
+        <input type="hidden" id="edit-id">
+        <form id="form-cadastro">
+            <h2>Médicos</h2>
+
+            <label for="nome">Nome do médico:</label>
+            <input type="text" id="nome" placeholder="Nome completo" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" placeholder="Idade" required>
+
+            <label for="contato">Contato:</label>
+            <input type="text" id="contato" placeholder="Telefone (ex: (31) 98888-2222)" required>
+
+            <label for="especialidade">Especialidade:</label>
+            <select id="especialidade" required>
+                <option value="">Selecione a especialidade</option>
+                <option value="Cardiologista">Cardiologista</option>
+                <option value="Neurologista">Neurologista</option>
+                <option value="Clínico Geral">Clínico Geral</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Dermatologista">Dermatologista</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <div class="container-buttons">
+                <button type="submit" id="btn-submit">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>
+            &copy; CuidaMed - 2025 - Todos os Direitos Reservados
+        </p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            pegarMedicos(); // Alterado de pegarmedicamentos() para pegarMedicos()
+            const btnHamburger = document.getElementById('btn-hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (btnHamburger && navMenu) { 
+                btnHamburger.addEventListener('click', () => {
+                    btnHamburger.classList.toggle('aberto');
+                    navMenu.classList.toggle('menu-aberto');
+                    const estaAberto = navMenu.classList.contains('menu-aberto');
+                    btnHamburger.setAttribute('aria-expanded', estaAberto);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
