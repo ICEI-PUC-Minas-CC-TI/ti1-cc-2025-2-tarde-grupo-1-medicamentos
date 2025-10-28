@@ -36,7 +36,7 @@
                     <h2>Nova Entidade</h2>
                 </div>
                 
-                <form id="form-paciente" class="form-cadastro" onsubmit="event.preventDefault(); inserirPaciente();">
+                <form id="form-paciente" class="form-cadastro">
                     <input type="hidden" id="paciente-id">
                     
                     <!-- Nome Completo -->
@@ -70,7 +70,7 @@
 
                     <!-- Botões -->
                     <div class="form-buttons-simple">
-                        <button type="submit" id="btn-inserir" class="btn btn-cadastrar">Cadastrar</button>
+                        <button type="button" id="btn-inserir" class="btn btn-cadastrar">Cadastrar</button>
                         <button type="button" id="btn-atualizar" class="btn btn-warning" style="display: none;">Atualizar</button>
                         <button type="button" id="btn-cancelar" class="btn btn-secondary" style="display: none;">Cancelar</button>
                         <button type="button" id="btn-voltar" class="btn btn-voltar">Voltar para Home</button>
