@@ -11,9 +11,6 @@ let ordenacaoAtual = 'nome';
 let timerSegundos = 0;
 let timerInterval;
 
-// Controle para evitar duplicação
-let processandoCadastro = false;
-
 // Elementos do DOM
 const form = document.getElementById('form-paciente');
 const btnInserir = document.getElementById('btn-inserir');
@@ -39,23 +36,14 @@ function inicializarPagina() {
 
 // EVENTO 2: onclick - Configuração de eventos de botão
 function configurarEventos() {
-    // Remove event listeners antigos para evitar duplicação
-    btnInserir.onclick = null;
-    btnAtualizar.onclick = null;
-    
-    // Adiciona os event listeners
     btnInserir.addEventListener('click', inserirPaciente);
     btnAtualizar.addEventListener('click', atualizarPaciente);
     btnCancelar.addEventListener('click', cancelarEdicao);
     btnVoltar.addEventListener('click', voltarParaHome);
     btnExportar.addEventListener('click', exportarDados);
     
-    // Prevenir submit duplo no formulário
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    });
+    // EVENTO 3: onkeyup já configurado no HTML para pesquisa em tempo real
+    // EVENTO 4: onchange já configurado no HTML para filtros
     
     // Máscara para telefone
     const contatoInput = document.getElementById('contato');
@@ -85,17 +73,7 @@ function iniciarTimer() {
 
 // CREATE - Inserir novo paciente
 async function inserirPaciente() {
-    // Prevenir duplicação
-    if (processandoCadastro) {
-        console.log('Cadastro já em andamento...');
-        return;
-    }
-    
     if (!validarFormulario()) return;
-
-    processandoCadastro = true;
-    btnInserir.disabled = true;
-    btnInserir.textContent = 'Cadastrando...';
 
     const paciente = {
         nome: document.getElementById('nome').value.trim(),
@@ -127,11 +105,6 @@ async function inserirPaciente() {
         console.error('Erro:', error);
         mostrarMensagem('Erro ao cadastrar paciente. Verifique se o JSON Server está rodando.', 'error');
         timerStatus.textContent = '🔴 Erro de Conexão';
-    } finally {
-        // Sempre reativa o botão, mesmo em caso de erro
-        processandoCadastro = false;
-        btnInserir.disabled = false;
-        btnInserir.textContent = 'Cadastrar';
     }
 }
 
@@ -162,12 +135,7 @@ async function carregarPacientes() {
 
 // UPDATE - Atualizar paciente
 async function atualizarPaciente() {
-    if (processandoCadastro) return;
     if (!validarFormulario() || !editandoId) return;
-
-    processandoCadastro = true;
-    btnAtualizar.disabled = true;
-    btnAtualizar.textContent = 'Atualizando...';
 
     const paciente = {
         nome: document.getElementById('nome').value.trim(),
@@ -198,10 +166,6 @@ async function atualizarPaciente() {
     } catch (error) {
         console.error('Erro:', error);
         mostrarMensagem('Erro ao atualizar paciente', 'error');
-    } finally {
-        processandoCadastro = false;
-        btnAtualizar.disabled = false;
-        btnAtualizar.textContent = 'Atualizar';
     }
 }
 
