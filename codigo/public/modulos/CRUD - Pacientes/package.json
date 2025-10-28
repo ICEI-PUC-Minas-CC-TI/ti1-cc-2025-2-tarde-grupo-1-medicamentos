@@ -1,0 +1,20 @@
+{
+  "name": "crud-pasciente",
+  "version": "1.0.0",
+  "description": "Sistema de gerenciamento de pacientes - CuidaMed",
+  "main": "index.html",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3001 --host localhost",
+    "dev": "live-server --port=3000 --entry-file=index.html",
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "install-deps": "npm install json-server live-server concurrently --save-dev"
+  },
+  "keywords": ["saude", "pacientes", "cadastro", "javascript", "crud", "api"],
+  "author": "Savyo Henio Martins Teixeira",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2"
+  }
+}

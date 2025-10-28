@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuidaMed - Sistema de Saúde</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="carregarDadosIniciais()">
+    <header>
+        <a href="index.html">
+            <div class="logo-placeholder">
+                <img src="assets/images/logoTI.png" alt="Logo CuidaMed" class="logo-img">
+                CuidaMed
+            </div>
+        </a>
+        
+        <div class="icons-container">
+            <div class="user-avatar">S</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner-container">
+            <div class="banner-content">
+                <h1>Bem-vindo ao CuidaMed</h1>
+                <p>Sistema de gerenciamento de pacientes</p>
+                <div class="banner-stats">
+                    <div class="stat-card">
+                        <h3 id="total-pacientes">0</h3>
+                        <p>Pacientes Cadastrados</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>3</h3>
+                        <p>Tipos de Cadastro</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="status-sistema">100%</h3>
+                        <p>Sistema Online</p>
+                    </div>
+                </div>
+                <a href="cadastro-pacientes.html" class="btn-primary">Gerenciar Pacientes</a>
+            </div>
+        </div>
+
+        <section class="features">
+            <div class="container">
+                <h2>Dashboard - Estatísticas</h2>
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Distribuição por Tipo</h3>
+                        <canvas id="chartTipo"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Distribuição por Idade</h3>
+                        <canvas id="chartIdade"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CuidaMed - Sistema de Saúde</p>
+            <p>Desenvolvido por Savyo Henio Martins Teixeira</p>
+            <p id="contador-visitas">Visitas: 0</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
