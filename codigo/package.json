@@ -7,7 +7,7 @@
     "start": "npx json-server --watch ./db/db.json --static ./public"
   },
   "keywords": [],
-  "author": "Rommel Vieira Carneiro",
+  "author": "Kaio Ferreira Dias",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
