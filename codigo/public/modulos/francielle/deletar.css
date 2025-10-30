@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 20px;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h2 {
+  color: #c0392b;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.botoes button {
+  padding: 10px 15px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#confirmar {
+  background-color: #c0392b;
+  color: white;
+}
+
+#confirmar:hover {
+  background-color: #a93226;
+}
+
+#cancelar {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+#cancelar:hover {
+  background-color: #95a5a6;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
