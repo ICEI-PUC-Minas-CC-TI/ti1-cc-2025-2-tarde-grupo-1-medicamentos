@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembretes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../assets/css/lembretes.css">
+</head>
+<body>
+
+    <header>
+        <a href="#">
+            <i class="fa-solid fa-plus-square" style="font-size: 40px; color: white; padding-left: 10px;"></i>
+        </a>
+        <nav class="menu-container">
+            <ul>
+                <li class="menu-item"><a href="#">Início</a></li>
+                <li class="menu-item"><a href="#">Cadastros</a></li>
+                <li class="menu-item">
+                    <a href="#">Medicamentos ▾</a>
+                    <ul>
+                        <li><a href="#">Consultar</a></li>
+                        <li><a href="#">Adicionar</a></li>
+                    </ul>
+                </li>
+                 <li class="menu-item">
+                    <a href="#">Menu do Usuário ▾</a>
+                    <ul>
+                        <li><a href="#">Meu Perfil</a></li>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons-container">
+             <i class="fa-solid fa-search" style="color: white; font-size: 24px; cursor: pointer;"></i>
+            <i class="fa-solid fa-bell" style="color: white; font-size: 24px; cursor: pointer;"></i>
+            <p>A</p>
+        </div>
+        <button class="menu-hamburger">
+            <div class="hamburger-linha"></div>
+            <div class="hamburger-linha"></div>
+            <div class="hamburger-linha"></div>
+        </button>
+    </header>
+
+    <main>
+        <div class="reminders-page-container">
+            
+            <div class="reminders-header">
+                <button class="btn-filter" id="btn-filter">
+                    <i class="fa-solid fa-filter"></i>
+                    filtro (todos)
+                </button>
+                <a href="../../index.html">
+                    <button class="btn-back">Voltar</button>
+                </a>
+            </div>
+
+            <div class="reminders-content-box">
+                
+                <section class="daily-reminders">
+                    <h2>Lembretes do Dia</h2>
+                    
+                    <div class="reminder-list-header">
+                        <span class="col-concluido">Concluído</span>
+                        <span class="col-data">Data/Hora</span>
+                        <span class="col-lembrete">Lembrete</span>
+                        <span class="col-action">Ação</span>
+                    </div>
+                    
+                    <div id="reminder-list-container">
+                        </div>
+                    
+                </section>
+
+                <section class="new-reminder-section">
+                    <h2>Novos Lembretes</h2>
+                    
+                    <form id="new-reminder-form">
+                        <div class="form-row">
+                            <div class="form-group date-group">
+                                <input type="text" placeholder="Data/Hora" id="form-data-hora" onfocus="(this.type='datetime-local')" onblur="(this.type='text')">
+                                <i class="fa-solid fa-calendar-alt"></i>
+                            </div>
+                            <div class="form-group toggle-group">
+                                <span>Todo Dia</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="form-toggle-eday">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <textarea placeholder="Remédio Pressão" id="form-descricao"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row form-actions">
+                            <button type="submit" class="btn-save">Salvar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="../../assets/js/lembretes.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
+const LOGIN_URL = "/codigo/public/index.html"; // trocar caminho dps, quando login estiver implementado certo
 let RETURN_URL = "/modulos/login/index.html";
 const API_URL = '/usuarios';
 
