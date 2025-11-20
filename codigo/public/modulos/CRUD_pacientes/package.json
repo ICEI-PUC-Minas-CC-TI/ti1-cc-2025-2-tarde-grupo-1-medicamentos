@@ -4,7 +4,7 @@
   "description": "Sistema de gerenciamento de pacientes - CuidaMed",
   "main": "index.html",
   "scripts": {
-    "server": "json-server --watch db.json --port 3001 --host localhost",
+    "server": "json-server --watch ./../../../db/db.json --port 3000 --host localhost",
     "dev": "live-server --port=3000 --entry-file=index.html",
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "install-deps": "npm install json-server live-server concurrently --save-dev"
