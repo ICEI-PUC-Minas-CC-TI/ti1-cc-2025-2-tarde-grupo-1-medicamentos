@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #69B7BF;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+header img {
+    height: 60px; /* TAMANHO DA LOGO */
+}
+
+header>a>img {
+    width: 60px;
+}
+
+.icons-container img {
+    width: 30px;
+}
+
+.menu-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container>ul {
+    display: flex;
+    background-color: #69B7BF;
+    justify-content: center;
+}
+
+.menu-container a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    display: none;
+    z-index: 10;
+}
+
+.menu-item ul>li>a {
+    color: #69B7BF;
+}
+
+.menu-item:hover>ul {
+    display: block;
+    font-weight: 500;
+}
+
+.icons-container {
+    display: flex;
+    gap: 15px; /* Aumentei o gap para ícones do FA */
+    align-items: center;
+}
+
+.icons-container img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icons-container p {
+    font-size: 17px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #69B7BF; /* Cor do texto do 'A' */
+}
+
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger-linha {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(1) {
+    transform: translateY(11.5px) rotate(45deg);
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(3) {
+    transform: translateY(-11.5px) rotate(-45deg);
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Removi .banner-container pois não está na tela de lembretes */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69B7BF;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #5E848C;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-container.menu-aberto {
+        display: flex;
+    }
+
+    .menu-container>ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-container a {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item ul {
+        position: static;
+        border: none;
+        background-color: #69B7BF;
+        min-width: 100%;
+    }
+
+    .menu-item ul li a {
+        color: #f0f0f0; /* Corrigido para melhor leitura */
+        font-weight: 500;
+    }
+
+    .menu-item:hover>ul {
+        display: block;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+}
+
+
+
+/*  PÁGINA DE LEMBRETES              */
+
+
+/* Container geral da página em <main> */
+.reminders-page-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Cabeçalho com botões Voltar e Filtro */
+.reminders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-filter {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #555555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+.btn-filter i {
+    color: #69B7BF;
+}
+
+.btn-back {
+    background-color: #69B7BF;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.btn-back:hover {
+    background-color: #5a9fa8;
+}
+
+/* Caixa de conteúdo principal (fundo cinza) */
+.reminders-content-box {
+    background-color: #f0f4f5; /* Tom de cinza claro da imagem */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.daily-reminders,
+.new-reminder-form {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* -- Seção Lembretes do Dia -- */
+
+/* Grid para alinhar colunas */
+.reminder-list-header,
+.reminder-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 50px; /* Ajuste as colunas */
+    gap: 15px;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 10px;
+}
+
+.reminder-list-header {
+    background-color: transparent;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.reminder-item {
+    background-color: #69B7BF; /* Cor da linha do item */
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.col-concluido { text-align: center; }
+.col-action { text-align: center; }
+
+.btn-delete {
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Componente Toggle Switch (para 2 e 3) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Largura ajustada */
+    height: 26px; /* Altura ajustada */
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Círculo interno */
+    width: 20px; /* Círculo interno */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #f0f4f5; /* Cor do toggle ligado (cinza claro) */
+}
+input:checked + .slider:before {
+    background-color: #69B7BF; /* Cor do círculo */
+    transform: translateX(24px); /* Distância do movimento */
+}
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+/* Ajuste no toggle da linha .reminder-item */
+.reminder-item .slider {
+    background-color: #5a9fa8; /* Fundo do toggle desligado (escuro) */
+}
+.reminder-item input:checked + .slider {
+    background-color: #ffffff; /* Fundo do toggle ligado (branco) */
+}
+.reminder-item input:checked + .slider:before {
+    background-color: #69B7BF; /* Círculo (cor principal) */
+}
+
+
+/* -- Seção Novos Lembretes (Formulário) -- */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+/* Input de data/hora */
+.date-group {
+    position: relative;
+    flex-grow: 1;
+}
+.date-group input {
+    padding-right: 35px; /* Espaço para o ícone */
+}
+.date-group i {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: #888;
+}
+
+/* Input "Todo Dia" */
+.toggle-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 0; /* Não esticar */
+    padding-top: 5px; /* Alinhamento */
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilo geral dos inputs */
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    justify-content: flex-end; /* Alinhar botão Salvar à direita */
+}
+
+.btn-save {
+    background-color: #69B7BF;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.btn-save:hover {
+    background-color: #5a9fa8;
+}
+
+
+/* -- Ajustes Responsivos para o Conteúdo -- */
+@media (max-width: 768px) {
+    .reminders-page-container {
+        padding: 10px;
+    }
+    
+    .reminders-content-box {
+        padding: 15px;
+    }
+
+    .reminder-list-header {
+        display: none; /* Esconde cabeçalho da lista em mobile */
+    }
+
+    .reminder-item {
+        grid-template-columns: 60px 1fr 40px; /* Colunas mobile: toggle | texto | lixeira */
+        grid-template-areas: 
+            "concluido lembrete action"
+            "concluido data     action";
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .col-concluido { grid-area: concluido; }
+    .col-data { grid-area: data; font-size: 14px; opacity: 0.9; }
+    .col-lembrete { grid-area: lembrete; font-weight: 600; }
+    .col-action { grid-area: action; }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .toggle-group {
+        justify-content: space-between; /* Espaçar "Todo Dia" do toggle */
+    }
+}

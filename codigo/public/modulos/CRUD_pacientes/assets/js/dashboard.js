@@ -10,7 +10,7 @@ async function carregarDadosIniciais() {
 // Carregar estatísticas da API
 async function carregarEstatisticas() {
     try {
-        const response = await fetch('http://localhost:3001/pacientes');
+        const response = await fetch('http://localhost:3000/pacientes');
         
         if (response.ok) {
             const pacientes = await response.json();
@@ -122,7 +122,7 @@ function iniciarContadorVisitas() {
 function atualizarStatusSistema() {
     setInterval(async () => {
         try {
-            const response = await fetch('http://localhost:3001/pacientes');
+            const response = await fetch('http://localhost:3000/pacientes');
             if (response.ok) {
                 document.getElementById('status-sistema').textContent = '100%';
                 document.getElementById('status-sistema').style.color = '#28a745';

@@ -1,5 +1,6 @@
 // Configuração da API - JSON Server
-const API_URL = 'http://localhost:3001';
+const API_URL = 'http://localhost:3000';
+
 
 // Estado da aplicação
 let pacientes = [];
