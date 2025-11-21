@@ -91,7 +91,8 @@
       "dose": "420mg",
       "intervalo": "6 em 6 horas",
       "dosePorEmbalagem": "15",
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Anti-inflamatório"
     },
     {
       "id": "4",
@@ -99,7 +100,8 @@
       "dose": "500mg",
       "intervalo": "12 em 12 horas",
       "dosePorEmbalagem": "21",
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Antibiótico"
     },
     {
       "id": "5",
@@ -107,7 +109,8 @@
       "dose": "100mg",
       "intervalo": "8 em 8 horas",
       "dosePorEmbalagem": "30",
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Anti-hipertensivo"
     },
     {
       "id": "6",
@@ -115,7 +118,8 @@
       "dose": "750mg",
       "intervalo": "8 em 8 horas",
       "dosePorEmbalagem": 20,
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Analgésico"
     },
     {
       "id": "7",
@@ -123,7 +127,8 @@
       "dose": "1g",
       "intervalo": "6 em 6 horas",
       "dosePorEmbalagem": 10,
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Analgésico"
     },
     {
       "id": "8",
@@ -131,7 +136,8 @@
       "dose": "20mg",
       "intervalo": "24 em 24 horas",
       "dosePorEmbalagem": 30,
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Estatina"
     },
     {
       "id": "9",
@@ -139,7 +145,8 @@
       "dose": "20mg",
       "intervalo": "24 em 24 horas",
       "dosePorEmbalagem": 28,
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Antiácido"
     },
     {
       "id": "10",
@@ -147,7 +154,8 @@
       "dose": "850mg",
       "intervalo": "12 em 12 horas",
       "dosePorEmbalagem": 60,
-      "status": "ativo"
+      "status": "ativo",
+      "tipo": "Antidiabético"
     }
   ],
   "medicos": [
