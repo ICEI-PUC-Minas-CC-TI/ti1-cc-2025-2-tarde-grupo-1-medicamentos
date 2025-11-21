@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const btnAbrir = document.getElementById('btn-abrir-pesquisa');
     const overlay = document.getElementById('overlay-pesquisa');
     const btnFechar = document.getElementById('btn-fechar-pesquisa');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    btnAbrir.addEventListener('click', function() {
+    btnAbrir.addEventListener('click', function () {
         overlay.style.display = 'block';
         setTimeout(() => {
             overlay.classList.add('ativo');
@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnFechar.addEventListener('click', fecharPesquisa);
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             fecharPesquisa();
         }
     });
 
-    overlay.addEventListener('click', function(e) {
+    overlay.addEventListener('click', function (e) {
         if (e.target === overlay) {
             fecharPesquisa();
         }
     });
 
-    inputPesquisa.addEventListener('input', function(e) {
+    inputPesquisa.addEventListener('input', function (e) {
         const termo = e.target.value.trim();
         if (termo.length > 1) {
             buscarMedicamentos(termo);
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const nomeMatch = med.nome?.toLowerCase().includes(termo.toLowerCase());
                 const tipoMatch = med.tipo?.toLowerCase().includes(termo.toLowerCase());
                 const doseMatch = med.dose?.toLowerCase().includes(termo.toLowerCase());
-                
+
                 return nomeMatch || tipoMatch || doseMatch;
             });
 
@@ -75,15 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 { id: 5, nome: "Ibuprofeno 400mg", dose: "400mg", tipo: "Anti-inflamatório", laboratorio: "Genérico", preco: "R$ 15,90 - 25,90" },
                 { id: 6, nome: "Omeprazol 20mg", dose: "20mg", tipo: "Antiácido", laboratorio: "Genérico", preco: "R$ 25,90 - 35,90" }
             ];
-            
+
             const resultadosFiltrados = medicamentosExemplo.filter(med => {
                 const nomeMatch = med.nome?.toLowerCase().includes(termo.toLowerCase());
                 const tipoMatch = med.tipo?.toLowerCase().includes(termo.toLowerCase());
                 const doseMatch = med.dose?.toLowerCase().includes(termo.toLowerCase());
-                
+
                 return nomeMatch || tipoMatch || doseMatch;
             });
-            
+
             exibirResultados(resultadosFiltrados, termo);
         }
     }
@@ -91,31 +91,34 @@ document.addEventListener('DOMContentLoaded', function() {
     function exibirResultados(resultadosArray, termo) {
         if (resultadosArray.length === 0) {
             resultados.innerHTML = `
-                <div class="resultado-vazio">
-                    Nenhum medicamento encontrado para "${termo}"
-                </div>
-            `;
+            <div class="resultado-vazio">
+                Nenhum medicamento encontrado para "${termo}"
+            </div>
+        `;
             return;
         }
 
         const htmlResultados = resultadosArray.map(med => `
             <div class="item-resultado" data-id="${med.id}">
-                <div class="nome-remedio">${med.nome}</div>
-                <div class="info-dosagem">
-                    <span class="dosagem">${med.dose}</span>
-                    <span class="preco-medio">${med.preco || 'R$ 15,00 - 25,00'}</span>
-                </div>
-                <div class="info-laboratorio">
-                    <span class="laboratorio">${med.laboratorio || 'Genérico'}</span>
-                    <span class="tipo">${med.tipo || 'Medicamento'}</span>
+                <div class="resultado-com-imagem">
+                    <img src="${med.imagem || './assets/images/medicamentos/padrao.jpg'}" 
+                        alt="${med.nome}" 
+                        class="imagem-remedio"
+                        onerror="this.src='./assets/images/medicamentos/padrao.jpg'">
+                    <div class="resultado-info">
+                        <strong>${med.nome}</strong>
+                        <span>${med.dose} - ${med.intervalo}</span>
+                        <span class="tipo-remedio">${med.tipo || 'Medicamento'}</span>
+                    </div>
                 </div>
             </div>
-        `).join('');
+    `).join('');
 
         resultados.innerHTML = htmlResultados;
 
+
         document.querySelectorAll('.item-resultado').forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const id = this.getAttribute('data-id');
                 selecionarMedicamento(id);
             });
@@ -124,9 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function selecionarMedicamento(id) {
         console.log('Medicamento selecionado ID:', id);
-        if (typeof carregarDadosParaEdicao === 'function') {
-            carregarDadosParaEdicao(id);
-        }
+        window.location.href = `detalhes.html?id=${id}`;
         fecharPesquisa();
     }
 
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         document.querySelectorAll('.sugestao').forEach(sugestao => {
-            sugestao.addEventListener('click', function() {
+            sugestao.addEventListener('click', function () {
                 const termo = this.getAttribute('data-termo');
                 inputPesquisa.value = termo;
                 buscarMedicamentos(termo);

@@ -4,7 +4,7 @@ const nomeInput = document.getElementById("nome");
 const doseInput = document.getElementById("dose");
 const intervaloInput = document.getElementById("intervalo");
 const doseEmbalagemInput = document.getElementById("doseEmbalagem");
-const editIdInput = document.getElementById("edit-id"); 
+const editIdInput = document.getElementById("edit-id");
 const formButton = document.getElementById("btn-submit");
 
 let API_URL = "http://localhost:3000/medicamentos";
@@ -23,11 +23,17 @@ async function pegarmedicamentos() {
         dados.forEach((med, index) => {
             console.log(`processando medicamentos ${index}: `, med);
 
+
+            // No script.js, modifique a parte que gera os cards:
             lista += `
-            <a href="index.html?id=${med.id}">
+            <a href="detalhes.html?id=${med.id}">
                 <section class="card">
                     <div class="content">
                         <p class="check-area"> . </p>
+                        <img src="${med.imagem || './assets/images/medicamentos/padrao.jpg'}" 
+                            alt="${med.nome}" 
+                            class="medicamento-imagem"
+                            onerror="this.src='./assets/images/medicamentos/padrao.jpg'">
                         <p class="horario">${med.intervalo}</p>
                         <p class="nome">${med.nome}</p>
                         <p class="dose">${med.dose}</p>
@@ -44,8 +50,8 @@ async function pegarmedicamentos() {
 
         const h1 = cardContainer.querySelector('h1').outerHTML;
         const titles = cardContainer.querySelector('.card-item').outerHTML;
-        cardContainer.innerHTML = h1 + titles; 
-        cardContainer.innerHTML += lista; 
+        cardContainer.innerHTML = h1 + titles;
+        cardContainer.innerHTML += lista;
 
         adicionarDelete();
         adicionarEditar();
@@ -68,7 +74,7 @@ async function handleFormSubmit(event) {
         dose: doseInput.value,
         intervalo: intervaloInput.value,
         dosePorEmbalagem: doseEmbalagemInput.value,
-        tipo: tipoInput.value, 
+        tipo: tipoInput.value,
         status: "ativo"
     };
 
@@ -102,7 +108,7 @@ async function criarNovoMedicamento(dados) {
 function adicionarEditar() {
     document.querySelectorAll('.btn-editar-card').forEach(btn => {
         btn.addEventListener('click', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
             event.stopPropagation();
             const id = this.getAttribute('data-id');
             carregarDadosParaEdicao(id);
@@ -120,9 +126,9 @@ async function carregarDadosParaEdicao(id) {
         nomeInput.value = med.nome;
         doseInput.value = med.dose;
         intervaloInput.value = med.intervalo;
-        doseEmbalagemInput.value = med.dosePorEmbalagem; 
+        doseEmbalagemInput.value = med.dosePorEmbalagem;
         tipoInput.value = med.tipo || ''; // NOVO CAMPO
-        editIdInput.value = id; 
+        editIdInput.value = id;
 
         formButton.textContent = "Salvar Alterações";
 
@@ -149,7 +155,7 @@ async function atualizarMedicamento(id, dados) {
         }
 
         resetarFormulario();
-        await pegarmedicamentos(); 
+        await pegarmedicamentos();
         alert("Medicamento atualizado com sucesso!");
 
     } catch (erro) {
@@ -160,8 +166,8 @@ async function atualizarMedicamento(id, dados) {
 
 function resetarFormulario() {
     formCadastro.reset();
-    editIdInput.value = ""; 
-    formButton.textContent = "Cadastrar"; 
+    editIdInput.value = "";
+    formButton.textContent = "Cadastrar";
 }
 
 // DELETE 
@@ -176,28 +182,28 @@ async function excluirmedicamento(id) {
         });
 
         if (resposta.ok) {
-            await pegarmedicamentos(); 
+            await pegarmedicamentos();
             alert("Medicamentos excluidos com sucesso!");
         } else {
             alert("Erro ao excluir medicamento!");
         }
     } catch (error) {
-        console.error("Erro ao excluir medicamento: ", error); 
+        console.error("Erro ao excluir medicamento: ", error);
         alert("Erro ao excluir medicamento!");
     }
 }
 
 function adicionarDelete() {
     document.querySelectorAll('.btn-excluir-card').forEach(btn => {
-        btn.addEventListener('click', function (event) { 
-            event.preventDefault(); 
-            event.stopPropagation(); 
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             const id = this.getAttribute('data-id');
             excluirmedicamento(id);
         });
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     pegarmedicamentos();
 });

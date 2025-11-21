@@ -92,7 +92,8 @@
       "intervalo": "6 em 6 horas",
       "dosePorEmbalagem": "15",
       "status": "ativo",
-      "tipo": "Anti-inflamatório"
+      "tipo": "Anti-inflamatório",
+      "imagem": "./assets/images/produtos/Remedio8.png"
     },
     {
       "id": "4",
@@ -101,7 +102,8 @@
       "intervalo": "12 em 12 horas",
       "dosePorEmbalagem": "21",
       "status": "ativo",
-      "tipo": "Antibiótico"
+      "tipo": "Antibiótico",
+      "imagem": "./assets/images/produtos/Remedio7.png"
     },
     {
       "id": "5",
@@ -110,7 +112,8 @@
       "intervalo": "8 em 8 horas",
       "dosePorEmbalagem": "30",
       "status": "ativo",
-      "tipo": "Anti-hipertensivo"
+      "tipo": "Anti-hipertensivo",
+      "imagem": "./assets/images/produtos/Remedio6.png"
     },
     {
       "id": "6",
@@ -119,7 +122,8 @@
       "intervalo": "8 em 8 horas",
       "dosePorEmbalagem": 20,
       "status": "ativo",
-      "tipo": "Analgésico"
+      "tipo": "Analgésico",
+      "imagem": "./assets/images/produtos/Remedio5.png"
     },
     {
       "id": "7",
@@ -128,7 +132,8 @@
       "intervalo": "6 em 6 horas",
       "dosePorEmbalagem": 10,
       "status": "ativo",
-      "tipo": "Analgésico"
+      "tipo": "Analgésico",
+      "imagem": "./assets/images/produtos/Remedio4.png"
     },
     {
       "id": "8",
@@ -137,7 +142,8 @@
       "intervalo": "24 em 24 horas",
       "dosePorEmbalagem": 30,
       "status": "ativo",
-      "tipo": "Estatina"
+      "tipo": "Estatina",
+      "imagem": "./assets/images/produtos/Remedio3.png"
     },
     {
       "id": "9",
@@ -146,7 +152,8 @@
       "intervalo": "24 em 24 horas",
       "dosePorEmbalagem": 28,
       "status": "ativo",
-      "tipo": "Antiácido"
+      "tipo": "Antiácido",
+      "imagem": "./assets/images/produtos/Remedio2.png"
     },
     {
       "id": "10",
@@ -155,7 +162,8 @@
       "intervalo": "12 em 12 horas",
       "dosePorEmbalagem": 60,
       "status": "ativo",
-      "tipo": "Antidiabético"
+      "tipo": "Antidiabético",
+      "imagem": "./assets/images/produtos/Remedio1.png"
     }
   ],
   "medicos": [
