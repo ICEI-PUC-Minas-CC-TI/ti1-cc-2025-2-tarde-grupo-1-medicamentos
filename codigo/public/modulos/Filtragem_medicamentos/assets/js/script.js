@@ -1,5 +1,3 @@
-// script.js - APENAS CRUD (sem pesquisa)
-
 const cardContainer = document.querySelector(".card-container");
 const formCadastro = document.getElementById("form-cadastro");
 const nomeInput = document.getElementById("nome");
@@ -49,7 +47,8 @@ async function pegarmedicamentos() {
         cardContainer.innerHTML = h1 + titles; 
         cardContainer.innerHTML += lista; 
 
-        finalizarCarregamento();
+        adicionarDelete();
+        adicionarEditar();
 
     } catch (erro) {
         console.error("Erro ao carregar medicamentos:", erro);
@@ -69,6 +68,7 @@ async function handleFormSubmit(event) {
         dose: doseInput.value,
         intervalo: intervaloInput.value,
         dosePorEmbalagem: doseEmbalagemInput.value,
+        tipo: tipoInput.value, 
         status: "ativo"
     };
 
@@ -121,6 +121,7 @@ async function carregarDadosParaEdicao(id) {
         doseInput.value = med.dose;
         intervaloInput.value = med.intervalo;
         doseEmbalagemInput.value = med.dosePorEmbalagem; 
+        tipoInput.value = med.tipo || ''; // NOVO CAMPO
         editIdInput.value = id; 
 
         formButton.textContent = "Salvar Alterações";
@@ -197,10 +198,6 @@ function adicionarDelete() {
     });
 }
 
-function finalizarCarregamento() {
-    adicionarDelete();
-    adicionarEditar();
-}
 document.addEventListener('DOMContentLoaded', function() {
     pegarmedicamentos();
 });

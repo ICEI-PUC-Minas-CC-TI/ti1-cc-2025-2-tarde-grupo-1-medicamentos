@@ -1,19 +1,15 @@
-// pesquisa.js - Funcionalidade de pesquisa separada
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos da pesquisa
     const btnAbrir = document.getElementById('btn-abrir-pesquisa');
     const overlay = document.getElementById('overlay-pesquisa');
     const btnFechar = document.getElementById('btn-fechar-pesquisa');
     const inputPesquisa = document.getElementById('input-pesquisa');
     const resultados = document.getElementById('resultados-pesquisa');
 
-    // Verificar se elementos existem
     if (!btnAbrir || !overlay) {
         console.log('Elementos de pesquisa não encontrados');
         return;
     }
 
-    // Abrir pesquisa
     btnAbrir.addEventListener('click', function() {
         overlay.style.display = 'block';
         setTimeout(() => {
@@ -23,24 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
         mostrarSugestoes();
     });
 
-    // Fechar pesquisa
     btnFechar.addEventListener('click', fecharPesquisa);
 
-    // Fechar com ESC
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             fecharPesquisa();
         }
     });
 
-    // Fechar ao clicar fora
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
             fecharPesquisa();
         }
     });
 
-    // Pesquisar ao digitar
     inputPesquisa.addEventListener('input', function(e) {
         const termo = e.target.value.trim();
         if (termo.length > 1) {
@@ -59,21 +51,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    function buscarMedicamentos(termo) {
-        // Simulação de busca - depois conecte com sua API
-        const medicamentosExemplo = [
-            { nome: "Dipirona 500mg", dose: "500mg", tipo: "Comprimido", laboratorio: "Genérico", preco: "R$ 8,90 - 15,90" },
-            { nome: "Paracetamol 750mg", dose: "750mg", tipo: "Comprimido", laboratorio: "Genérico", preco: "R$ 12,50 - 22,00" },
-            { nome: "Ibuprofeno 400mg", dose: "400mg", tipo: "Comprimido", laboratorio: "Genérico", preco: "R$ 15,90 - 25,90" },
-            { nome: "Amoxicilina 500mg", dose: "500mg", tipo: "Cápsula", laboratorio: "Genérico", preco: "R$ 18,00 - 28,50" },
-            { nome: "Omeprazol 20mg", dose: "20mg", tipo: "Cápsula", laboratorio: "Genérico", preco: "R$ 25,90 - 35,90" }
-        ];
+    async function buscarMedicamentos(termo) {
+        try {
+            const resposta = await fetch('http://localhost:3000/medicamentos');
+            const medicamentos = await resposta.json();
 
-        const resultadosFiltrados = medicamentosExemplo.filter(med => 
-            med.nome.toLowerCase().includes(termo.toLowerCase())
-        );
+            const resultadosFiltrados = medicamentos.filter(med => {
+                const nomeMatch = med.nome?.toLowerCase().includes(termo.toLowerCase());
+                const tipoMatch = med.tipo?.toLowerCase().includes(termo.toLowerCase());
+                const doseMatch = med.dose?.toLowerCase().includes(termo.toLowerCase());
+                
+                return nomeMatch || tipoMatch || doseMatch;
+            });
 
-        exibirResultados(resultadosFiltrados, termo);
+            exibirResultados(resultadosFiltrados, termo);
+        } catch (erro) {
+            console.error("Erro na pesquisa:", erro);
+            const medicamentosExemplo = [
+                { id: 1, nome: "Amoxicilina 500mg", dose: "500mg", tipo: "Antibiótico", laboratorio: "Genérico", preco: "R$ 18,00 - 28,50" },
+                { id: 2, nome: "Azitromicina 500mg", dose: "500mg", tipo: "Antibiótico", laboratorio: "Genérico", preco: "R$ 25,90 - 35,90" },
+                { id: 3, nome: "Dipirona 500mg", dose: "500mg", tipo: "Analgésico", laboratorio: "Genérico", preco: "R$ 8,90 - 15,90" },
+                { id: 4, nome: "Paracetamol 750mg", dose: "750mg", tipo: "Analgésico", laboratorio: "Genérico", preco: "R$ 12,50 - 22,00" },
+                { id: 5, nome: "Ibuprofeno 400mg", dose: "400mg", tipo: "Anti-inflamatório", laboratorio: "Genérico", preco: "R$ 15,90 - 25,90" },
+                { id: 6, nome: "Omeprazol 20mg", dose: "20mg", tipo: "Antiácido", laboratorio: "Genérico", preco: "R$ 25,90 - 35,90" }
+            ];
+            
+            const resultadosFiltrados = medicamentosExemplo.filter(med => {
+                const nomeMatch = med.nome?.toLowerCase().includes(termo.toLowerCase());
+                const tipoMatch = med.tipo?.toLowerCase().includes(termo.toLowerCase());
+                const doseMatch = med.dose?.toLowerCase().includes(termo.toLowerCase());
+                
+                return nomeMatch || tipoMatch || doseMatch;
+            });
+            
+            exibirResultados(resultadosFiltrados, termo);
+        }
     }
 
     function exibirResultados(resultadosArray, termo) {
@@ -87,20 +99,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const htmlResultados = resultadosArray.map(med => `
-            <div class="item-resultado">
+            <div class="item-resultado" data-id="${med.id}">
                 <div class="nome-remedio">${med.nome}</div>
                 <div class="info-dosagem">
                     <span class="dosagem">${med.dose}</span>
-                    <span class="preco-medio">${med.preco}</span>
+                    <span class="preco-medio">${med.preco || 'R$ 15,00 - 25,00'}</span>
                 </div>
                 <div class="info-laboratorio">
-                    <span class="laboratorio">${med.laboratorio}</span>
-                    <span class="tipo">${med.tipo}</span>
+                    <span class="laboratorio">${med.laboratorio || 'Genérico'}</span>
+                    <span class="tipo">${med.tipo || 'Medicamento'}</span>
                 </div>
             </div>
         `).join('');
 
         resultados.innerHTML = htmlResultados;
+
+        document.querySelectorAll('.item-resultado').forEach(item => {
+            item.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                selecionarMedicamento(id);
+            });
+        });
+    }
+
+    function selecionarMedicamento(id) {
+        console.log('Medicamento selecionado ID:', id);
+        if (typeof carregarDadosParaEdicao === 'function') {
+            carregarDadosParaEdicao(id);
+        }
+        fecharPesquisa();
     }
 
     function mostrarSugestoes() {
@@ -110,13 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="lista-sugestoes">
                     <div class="sugestao" data-termo="Dipirona">Dipirona</div>
                     <div class="sugestao" data-termo="Paracetamol">Paracetamol</div>
-                    <div class="sugestao" data-termo="Ibuprofeno">Ibuprofeno</div>
-                    <div class="sugestao" data-termo="Amoxicilina">Amoxicilina</div>
+                    <div class="sugestao" data-termo="Antibiótico">Antibiótico</div>
+                    <div class="sugestao" data-termo="Analgésico">Analgésico</div>
                 </div>
             </div>
         `;
 
-        // Adicionar eventos às sugestões
         document.querySelectorAll('.sugestao').forEach(sugestao => {
             sugestao.addEventListener('click', function() {
                 const termo = this.getAttribute('data-termo');

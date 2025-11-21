@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuidaMed</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <a href="index.html">
@@ -42,7 +44,7 @@
                 <button class="btn-abrir-pesquisa" id="btn-abrir-pesquisa">
                     <img src="./assets/images/lupa (1).png" alt="search">
                 </button>
-                
+
                 <div class="overlay-pesquisa" id="overlay-pesquisa">
                     <div class="barra-pesquisa-grande">
                         <div class="cabecalho-pesquisa">
@@ -53,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <img src="./assets/images/sino.png" alt="notifications">
             <p>A</p>
         </div>
@@ -84,10 +86,12 @@
         <input type="hidden" id="edit-id">
         <form id="form-cadastro">
             <h2>Medicamento</h2>
-            <label for="intervalo">Nome do medicamento:</label>
+            <label for="nome">Nome do medicamento:</label>
             <input type="text" id="nome" placeholder="Nome (ex: Paracetamol 750mg)" required>
-            <label for="intervalo">Dose:</label>
+
+            <label for="dose">Dose:</label>
             <input type="text" id="dose" placeholder="Dose (ex: 750mg)" required>
+
             <label for="intervalo">Intervalo:</label>
             <select id="intervalo" required>
                 <option value="">Selecione o intervalo</option>
@@ -97,8 +101,23 @@
                 <option value="12 em 12 horas">12 em 12 horas</option>
                 <option value="1 vez ao dia">1 vez ao dia</option>
             </select>
-            <label for="intervalo">Doses por embalagem:</label>
+
+            <label for="doseEmbalagem">Doses por embalagem:</label>
             <input type="text" id="doseEmbalagem" placeholder="Doses por embalagem (ex: 2)" required>
+
+            <label for="tipo">Tipo do medicamento:</label>
+            <select id="tipo" required>
+                <option value="">Selecione o tipo</option>
+                <option value="Analgésico">Analgésico</option>
+                <option value="Antibiótico">Antibiótico</option>
+                <option value="Anti-inflamatório">Anti-inflamatório</option>
+                <option value="Antitérmico">Antitérmico</option>
+                <option value="Anti-hipertensivo">Anti-hipertensivo</option>
+                <option value="Antidiabético">Antidiabético</option>
+                <option value="Antialérgico">Antialérgico</option>
+                <option value="Outro">Outro</option>
+            </select>
+
             <div class="container-buttons">
                 <button type="submit" id="btn-submit">Cadastrar</button>
             </div>
@@ -117,7 +136,7 @@
             const btnHamburger = document.getElementById('btn-hamburger');
             const navMenu = document.getElementById('nav-menu');
 
-            if (btnHamburger && navMenu) { 
+            if (btnHamburger && navMenu) {
                 btnHamburger.addEventListener('click', () => {
                     btnHamburger.classList.toggle('aberto');
                     navMenu.classList.toggle('menu-aberto');
@@ -128,4 +147,5 @@
         });
     </script>
 </body>
+
 </html>
