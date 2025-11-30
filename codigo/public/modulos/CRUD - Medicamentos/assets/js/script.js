@@ -9,26 +9,39 @@ const formButton = document.getElementById("btn-submit");
 
 let API_URL = "http://localhost:3000/medicamentos";
 
+async function buscarMedicamentoPorId(id) {
+    const resposta = await fetch(`${API_URL}/${id}`);
+    if (!resposta.ok) throw new Error("Erro ao buscar dados do medicamento.");
+    return await resposta.json();
+}
+
 // READ 
 async function pegarmedicamentos() {
     try {
         console.log("iniciando fetch...");
         const resposta = await fetch(API_URL);
-        console.log("resposta: ", resposta.status);
         const dados = await resposta.json();
-        console.log("Dados recebidos: ", dados);
+
+        dados.sort((a, b) => {
+            if (a.check && !b.check) return 1;
+            if (!a.check && b.check) return -1;
+            return 0;
+        });
 
         let lista = '';
 
-        dados.forEach((med, index) => {
-            console.log(`processando medicamentos ${index}: `, med);
+        dados.forEach((med) => {
+            const checkIcon = med.check ? '<img src="./assets/images/check.png" alt="Concluído" style="width: 15px; height: 15px;">' : ''; 
+            
+            const concluidoClass = med.check ? 'concluido' : '';
 
             lista += `
-            <a href="index.html?id=${med.id}">
-                <section class="card">
+            <a href="index.html?id=${med.id}" class="card-link">
+                <section class="card ${concluidoClass}">
                 
                     <div class="content">
-                        <p class="check-area"> . </p>
+                        <p class="check-area" data-id="${med.id}" data-check="${med.check}">${checkIcon}</p>
+                        
                         <p class="horario">${med.intervalo}</p>
                         <p class="nome">${med.nome}</p>
                         <p class="dose">${med.dose}</p>
@@ -43,13 +56,20 @@ async function pegarmedicamentos() {
             `;
         });
 
-        const h1 = cardContainer.querySelector('h1').outerHTML;
-        const titles = cardContainer.querySelector('.card-item').outerHTML;
-        cardContainer.innerHTML = h1 + titles; 
-        cardContainer.innerHTML += lista; 
+        const h1 = cardContainer.querySelector('h1') ? cardContainer.querySelector('h1').outerHTML : '';
+        const titles = cardContainer.querySelector('.card-item') ? cardContainer.querySelector('.card-item').outerHTML : '';
+
+        if(h1 && titles) {
+             cardContainer.innerHTML = h1 + titles + lista;
+        } else {
+            const linksAntigos = cardContainer.querySelectorAll('a');
+            linksAntigos.forEach(link => link.remove());
+            cardContainer.innerHTML += lista;
+        }
 
         adicionarDelete();
         adicionarEditar();
+        adicionarToggleCheck(); 
 
     } catch (erro) {
         console.error("Erro ao carregar medicamentos:", erro);
@@ -69,11 +89,18 @@ async function handleFormSubmit(event) {
         dose: doseInput.value,
         intervalo: intervaloInput.value,
         dosePorEmbalagem: doseEmbalagemInput.value,
-        status: "ativo"
+        status: "ativo",
+        check: false 
     };
 
     if (id) {
-        await atualizarMedicamento(id, dadosMedicamento);
+        try {
+            const medExistente = await buscarMedicamentoPorId(id);
+            dadosMedicamento.check = medExistente.check; 
+            await atualizarMedicamento(id, dadosMedicamento);
+        } catch (e) {
+            console.error("Erro ao buscar dados pré-edição", e);
+        }
     } else {
         await criarNovoMedicamento(dadosMedicamento);
     }
@@ -84,22 +111,17 @@ async function criarNovoMedicamento(dados) {
     try {
         await fetch(API_URL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
         });
-
         resetarFormulario();
         await pegarmedicamentos();
-
     } catch (erro) {
         console.error("Erro ao cadastrar medicamento:", erro);
     }
 }
 
-//UPDATE 
-
+// EDITAR 
 function adicionarEditar() {
     document.querySelectorAll('.btn-editar-card').forEach(btn => {
         btn.addEventListener('click', function (event) {
@@ -113,19 +135,13 @@ function adicionarEditar() {
 
 async function carregarDadosParaEdicao(id) {
     try {
-        const resposta = await fetch(`${API_URL}/${id}`);
-        if (!resposta.ok) throw new Error("Erro ao buscar dados do medicamento.");
-
-        const med = await resposta.json();
-
+        const med = await buscarMedicamentoPorId(id);
         nomeInput.value = med.nome;
         doseInput.value = med.dose;
         intervaloInput.value = med.intervalo;
         doseEmbalagemInput.value = med.dosePorEmbalagem; 
         editIdInput.value = id; 
-
         formButton.textContent = "Salvar Alterações";
-
         formCadastro.scrollIntoView({ behavior: 'smooth' });
     } catch (erro) {
         console.error("Erro ao carregar dados para edição:", erro);
@@ -133,29 +149,52 @@ async function carregarDadosParaEdicao(id) {
     }
 }
 
-//PUT
+// PUT 
 async function atualizarMedicamento(id, dados) {
     try {
         const resposta = await fetch(`${API_URL}/${id}`, {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
         });
-
-        if (!resposta.ok) {
-            throw new Error("Erro ao atualizar medicamento.");
-        }
-
+        if (!resposta.ok) throw new Error("Erro ao atualizar medicamento.");
         resetarFormulario();
         await pegarmedicamentos(); 
         alert("Medicamento atualizado com sucesso!");
-
     } catch (erro) {
         console.error("Erro ao atualizar medicamento:", erro);
         alert("Erro ao atualizar medicamento.");
     }
+}
+
+async function toggleCheckMedicamento(id, isChecked) {
+    try {
+        const med = await buscarMedicamentoPorId(id);
+        const dadosAtualizados = { ...med, check: isChecked };
+
+        const resposta = await fetch(`${API_URL}/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dadosAtualizados)
+        });
+
+        if (!resposta.ok) throw new Error("Erro ao atualizar status.");
+        await pegarmedicamentos(); 
+    } catch (erro) {
+        console.error("Erro ao dar check:", erro);
+    }
+}
+
+function adicionarToggleCheck() {
+    document.querySelectorAll('.check-area').forEach(checkArea => {
+        checkArea.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation(); 
+            const id = this.getAttribute('data-id');
+            const currentCheck = this.getAttribute('data-check') === 'true'; 
+            toggleCheckMedicamento(id, !currentCheck);
+        });
+    });
 }
 
 function resetarFormulario() {
@@ -164,28 +203,19 @@ function resetarFormulario() {
     formButton.textContent = "Cadastrar"; 
 }
 
-
-//  DELETE 
+// DELETE 
 async function excluirmedicamento(id) {
-    if (!confirm("Tem certeza que deja exclui este medicamento?")) {
-        return;
-    }
-
+    if (!confirm("Tem certeza que deseja excluir este medicamento?")) return;
     try {
-        const resposta = await fetch(`${API_URL}/${id}`, {
-            method: "DELETE"
-        });
-
+        const resposta = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
         if (resposta.ok) {
             await pegarmedicamentos(); 
-            alert("Medicamentos excluidos com sucesso!");
+            alert("Medicamento excluído com sucesso!");
         } else {
             alert("Erro ao excluir medicamento!");
         }
     } catch (error) {
         console.error("Erro ao excluir medicamento: ", error); 
-        alert("Erro ao excluir medicamento!");
-
     }
 }
 
@@ -199,3 +229,5 @@ function adicionarDelete() {
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', pegarmedicamentos);
