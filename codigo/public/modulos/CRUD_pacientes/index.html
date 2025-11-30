@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body onload="carregarDadosIniciais()">
+<body onload="inicializarPagina()">
     <header>
         <a href="index.html">
             <div class="logo-placeholder">
@@ -21,54 +21,117 @@
         </div>
     </header>
 
-    <main>
-        <div class="banner-container">
-            <div class="banner-content">
-                <h1>Bem-vindo ao CuidaMed</h1>
-                <p>Sistema de gerenciamento de pacientes</p>
-                <div class="banner-stats">
-                    <div class="stat-card">
-                        <h3 id="total-pacientes">0</h3>
-                        <p>Pacientes Cadastrados</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>3</h3>
-                        <p>Tipos de Cadastro</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 id="status-sistema">100%</h3>
-                        <p>Sistema Online</p>
-                    </div>
-                </div>
-                <a href="cadastro-pacientes.html" class="btn-primary">Gerenciar Pacientes</a>
+<main class="cadastro-main">
+    <div class="container">
+        
+            <h1>Pacientes Cadastrados <span id="contador-pacientes" class="contador">(0)</span></h1>
+        
+        <!-- Timer de Atualização -->
+        <div class="timer-container">
+            <span id="timer-status">🟢 Sistema Online</span>
+            <span id="ultima-atualizacao">Última atualização: <span id="timer">00:00</span></span>
+        </div>
+
+        <!-- Filtros e Pesquisa -->
+        <div class="filtros-container">
+            <div class="pesquisa-group">
+                <input type="text" id="input-pesquisa" placeholder="Pesquisar por nome..." onkeyup="aplicarFiltros()">
+                <button type="button" id="btn-pesquisar" class="btn btn-search" onclick="aplicarFiltros()">🔍 Pesquisar</button>
+            </div>
+            
+            <div class="filtros-group">
+                <select id="filtro-tipo" onchange="aplicarFiltros()">
+                    <option value="">Todos os tipos</option>
+                    <option value="pessoa">Pessoa</option>
+                    <option value="dependente">Dependente</option>
+                    <option value="idoso">Idoso</option>
+                </select>
+                
+                <select id="ordenacao" onchange="aplicarOrdenacao()">
+                    <option value="nome">Ordenar por Nome</option>
+                    <option value="idade">Ordenar por Idade</option>
+                    <option value="tipo">Ordenar por Tipo</option>
+                    <option value="id">Ordenar por Data</option>
+                </select>
+
+                <select id="filtro-idade" onchange="aplicarFiltros()">
+                    <option value="">Todas as idades</option>
+                    <option value="crianca">Criança (0-12)</option>
+                    <option value="adolescente">Adolescente (13-17)</option>
+                    <option value="adulto">Adulto (18-59)</option>
+                    <option value="idoso">Idoso (60+)</option>
+                </select>
             </div>
         </div>
 
-        <section class="features">
-            <div class="container">
-                <h2>Dashboard - Estatísticas</h2>
-                <div class="charts-container">
-                    <div class="chart-card">
-                        <h3>Distribuição por Tipo</h3>
-                        <canvas id="chartTipo"></canvas>
-                    </div>
-                    <div class="chart-card">
-                        <h3>Distribuição por Idade</h3>
-                        <canvas id="chartIdade"></canvas>
-                    </div>
+        <!-- Lista de Pacientes -->
+        <div class="pacientes-lista">
+            <div id="lista-pacientes" class="lista-container">
+                <div class="lista-vazia">
+                    Nenhum paciente cadastrado ainda.
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <div class="form-container">
+            <h2>Cadastro de Pacientes</h2>
+            <div class="form-header">
+                <h1>Nova Entidade</h1>
+            </div>
+            
+            <form id="form-paciente" class="form-cadastro">
+                <input type="hidden" id="paciente-id">
+                
+                <!-- Nome Completo -->
+                <div class="form-section">
+                    <label for="nome" class="section-label">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required class="form-input-large" placeholder="Digite o nome completo">
+                </div>
+
+                <!-- Dados em linha -->
+                <div class="form-row-inline">
+                    <div class="form-section">
+                        <label for="idade" class="section-label">- Idade:</label>
+                        <input type="number" id="idade" name="idade" required class="form-input-small" placeholder="Idade" min="0" max="150">
+                    </div>
+
+                    <div class="form-section">
+                        <label for="contato" class="section-label">- Contato:</label>
+                        <input type="tel" id="contato" name="contato" required class="form-input-medium" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-section">
+                        <label for="tipo" class="section-label">- Tipo:</label>
+                        <select id="tipo" name="tipo" required class="form-input-medium">
+                            <option value="">Selecione</option>
+                            <option value="pessoa">Pessoa</option>
+                            <option value="dependente">Dependente</option>
+                            <option value="idoso">Idoso</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botões -->
+                <div class="form-buttons-simple">
+                    <button type="button" id="btn-inserir" class="btn btn-cadastrar">Cadastrar</button>
+                    <button type="button" id="btn-atualizar" class="btn btn-warning" style="display: none;">Atualizar</button>
+                    <button type="button" id="btn-cancelar" class="btn btn-secondary" style="display: none;">Cancelar</button>
+                    <button type="button" id="btn-voltar" class="btn btn-voltar">Voltar para Home</button>
+                    <button type="button" id="btn-exportar" class="btn btn-info">Exportar Dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
 
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 CuidaMed - Sistema de Saúde</p>
             <p>Desenvolvido por Savyo Henio Martins Teixeira</p>
-            <p id="contador-visitas">Visitas: 0</p>
         </div>
     </footer>
 
-    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/cadastro-pacientes.js"></script>
 </body>
 </html>

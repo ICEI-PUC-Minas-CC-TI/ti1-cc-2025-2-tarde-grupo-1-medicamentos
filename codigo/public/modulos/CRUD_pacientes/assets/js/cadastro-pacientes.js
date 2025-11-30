@@ -33,6 +33,7 @@ function inicializarPagina() {
     carregarPacientes();
     configurarEventos();
     iniciarTimer();
+    atualizarStatusSistema();
 }
 
 // EVENTO 2: onclick - Configuração de eventos de botão

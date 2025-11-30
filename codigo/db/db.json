@@ -207,15 +207,6 @@
       "ativo": true
     },
     {
-      "id": 2,
-      "nome": "Maria Silva Santos",
-      "idade": 28,
-      "contato": "(11) 98765-4321",
-      "tipo": "pessoa",
-      "dataCadastro": "2025-01-14T14:20:00.000Z",
-      "ativo": true
-    },
-    {
       "id": 3,
       "nome": "João Pedro Oliveira",
       "idade": 72,
@@ -263,28 +254,6 @@
   ],
   "lembretes": [
     {
-      "id": 1,
-      "medicamentoId": 1,
-      "titulo": "Tomar Losartana 50mg",
-      "conteudo": "Tomar 1 comprimido pela manhã em jejum.",
-      "dataHora": "2025-11-15T08:00:00",
-      "todoDia": true,
-      "check": false,
-      "status": "pendente",
-      "idPessoa": 1
-    },
-    {
-      "id": 2,
-      "medicamentoId": 2,
-      "titulo": "Consulta Dr. House",
-      "conteudo": "Levar exames de sangue.",
-      "dataHora": "2025-11-14T15:00:00",
-      "todoDia": false,
-      "check": true,
-      "status": "concluido",
-      "idPessoa": 1
-    },
-    {
       "id": 3,
       "medicamentoId": 3,
       "titulo": "Tomar Ibuprofeno",
@@ -293,17 +262,6 @@
       "todoDia": true,
       "check": false,
       "status": "pendente",
-      "idPessoa": 1
-    },
-    {
-      "id": 4,
-      "medicamentoId": 1,
-      "titulo": "Tomar Losartana 50mg (Antigo)",
-      "conteudo": "Tomar 1 comprimido pela manhã.",
-      "dataHora": "2025-11-14T08:00:00",
-      "todoDia": true,
-      "check": true,
-      "status": "concluido",
       "idPessoa": 1
     },
     {
@@ -323,17 +281,6 @@
       "titulo": "Tomar Ibuprofeno",
       "conteudo": "Tomar às 10:00 - Ibuprofeno 400mg",
       "dataHora": "2024-09-20T10:00:00",
-      "todoDia": true,
-      "check": false,
-      "status": "pendente",
-      "idPessoa": 1
-    },
-    {
-      "id": 7,
-      "medicamentoId": 1,
-      "titulo": "Tomar Paracetamol",
-      "conteudo": "Tomar às 20:00 - Paracetamol 750mg",
-      "dataHora": "2024-09-20T20:00:00",
       "todoDia": true,
       "check": false,
       "status": "pendente",

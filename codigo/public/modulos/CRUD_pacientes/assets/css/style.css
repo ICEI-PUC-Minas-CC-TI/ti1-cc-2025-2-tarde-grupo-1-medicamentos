@@ -40,8 +40,11 @@ header {
     text-decoration: none;
 }
 
-.logo-placeholder span {
-    font-size: 28px;
+.logo-placeholder .logo-img {
+    height: 38px;
+    width: auto;
+    vertical-align: middle;
+    border-radius: 6px;
 }
 
 .icons-container {
@@ -64,119 +67,12 @@ header {
     font-size: 16px;
 }
 
-/* MAIN CONTENT */
-main {
-    flex-grow: 1;
-}
-
-.banner-container {
-    background-color: #69B7BF;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.banner-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.banner-content p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.banner-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-.stat-card {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 150px;
-    backdrop-filter: blur(10px);
-}
-
-.stat-card h3 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.stat-card p {
-    font-size: 0.9rem;
-    margin: 0;
-    opacity: 0.8;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #69B7BF;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-/* FEATURES SECTION */
-.features {
-    padding: 80px 20px;
-    background-color: #f8f9fa;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.features h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 50px;
-}
-
-.charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.chart-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.chart-card h3 {
-    color: #69B7BF;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-}
-
-/* PÁGINA DE CADASTRO */
+/* MAIN CONTENT - APENAS PARA CADASTRO */
 .cadastro-main {
     padding: 40px 20px;
     background-color: #f8f9fa;
     min-height: calc(100vh - 140px);
+    flex-grow: 1;
 }
 
 .container {
@@ -193,12 +89,14 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2rem;
+    font-weight: 700;
 }
-
 h2 {
-    color: #5E848C;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    color: #69B7BF;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .contador {
@@ -227,12 +125,163 @@ h2 {
     color: #6c757d;
 }
 
+/* Filtros e Pesquisa */
+.filtros-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.pesquisa-group {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.pesquisa-group input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.pesquisa-group input:focus {
+    outline: none;
+    border-color: #69B7BF;
+}
+
+.filtros-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtros-group select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 150px;
+    transition: border-color 0.3s ease;
+}
+
+.filtros-group select:focus {
+    outline: none;
+    border-color: #69B7BF;
+}
+
+/* Lista de Pacientes */
+.pacientes-lista {
+    margin-bottom: 40px;
+}
+.pacientes-lista h1 {
+    color: #69B7BF;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.lista-container {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 200px;
+    border: 1px solid #e9ecef;
+}
+
+.paciente-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #69B7BF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.paciente-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.paciente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.paciente-nome {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.paciente-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.paciente-tipo {
+    background: #69B7BF;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.paciente-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    color: #666;
+}
+
+.paciente-detail {
+    font-size: 0.95rem;
+}
+
+.paciente-detail strong {
+    color: #333;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 40px 0;
+}
+
 /* FORMULÁRIO */
 .form-container {
-    margin-bottom: 40px;
+    margin-top: 40px;
     background: white;
     border-radius: 8px;
     border: 2px solid #e9ecef;
+    position: relative;
+}
+
+/* Separador visual entre lista e formulário */
+.form-container::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #69B7BF, transparent);
+    margin: -20px 0 30px 0;
 }
 
 .form-header {
@@ -242,7 +291,7 @@ h2 {
     border-radius: 6px 6px 0 0;
 }
 
-.form-header h2 {
+.form-header h1 {
     color: white;
     margin: 0;
     font-size: 1.5rem;
@@ -305,48 +354,6 @@ h2 {
     align-items: flex-end;
     margin-bottom: 20px;
     flex-wrap: wrap;
-}
-
-/* Filtros e Pesquisa */
-.filtros-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-.pesquisa-group {
-    display: flex;
-    gap: 10px;
-    flex: 1;
-    min-width: 250px;
-}
-
-.pesquisa-group input {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.filtros-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.filtros-group select {
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    min-width: 150px;
 }
 
 /* Botões */
@@ -430,92 +437,21 @@ h2 {
 }
 
 .btn-search {
+    background-color: #69B7BF;
+    color: white;
     min-width: auto;
     padding: 10px 15px;
+}
+
+.btn-search:hover {
+    background-color: #5E848C;
+    transform: translateY(-2px);
 }
 
 .btn-sm {
     padding: 8px 15px;
     font-size: 14px;
     min-width: auto;
-}
-
-/* Lista de Pacientes */
-.pacientes-lista {
-    margin-top: 40px;
-}
-
-.lista-container {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    min-height: 200px;
-}
-
-.paciente-item {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #69B7BF;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-}
-
-.paciente-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.paciente-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.paciente-nome {
-    font-weight: 600;
-    color: #333;
-    font-size: 1.2rem;
-}
-
-.paciente-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.paciente-tipo {
-    background: #69B7BF;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.paciente-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    color: #666;
-}
-
-.paciente-detail {
-    font-size: 0.95rem;
-}
-
-.paciente-detail strong {
-    color: #333;
-}
-
-.lista-vazia {
-    text-align: center;
-    color: #666;
-    font-style: italic;
-    padding: 40px 0;
 }
 
 /* FOOTER */
@@ -537,7 +473,6 @@ footer {
     opacity: 0.9;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .cadastro-main {
         padding: 20px 10px;
@@ -551,43 +486,32 @@ footer {
         font-size: 1.5rem;
     }
     
-    .banner-content h1 {
-        font-size: 2rem;
-    }
-    
-    header {
-        padding: 15px 20px;
-    }
-    
-    .banner-stats {
-        gap: 15px;
-    }
-    
-    .stat-card {
-        min-width: 120px;
-        padding: 15px;
-    }
-    
-    .stat-card h3 {
-        font-size: 2rem;
-    }
-    
-    .charts-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .chart-card {
-        padding: 20px;
+    h2 {
+        font-size: 1.5rem;
     }
     
     .filtros-container {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
     }
     
     .pesquisa-group,
     .filtros-group {
         width: 100%;
+    }
+    
+    .pesquisa-group input {
+        width: 100%;
+    }
+    
+    .filtros-group {
+        flex-direction: column;
+    }
+    
+    .filtros-group select {
+        width: 100%;
+        min-width: auto;
     }
     
     .form-row-inline {
@@ -606,6 +530,7 @@ footer {
     
     .btn {
         width: 100%;
+        min-width: auto;
     }
     
     .paciente-header {
@@ -616,6 +541,7 @@ footer {
     .paciente-actions {
         width: 100%;
         justify-content: flex-start;
+        margin-top: 10px;
     }
     
     .paciente-details {
@@ -627,11 +553,24 @@ footer {
         gap: 10px;
         text-align: center;
     }
+    
+    .pacientes-lista {
+        margin-bottom: 30px;
+    }
+    
+    .form-container {
+        margin-top: 30px;
+    }
+    
+    .form-container::before {
+        margin: -15px 0 25px 0;
+    }
 }
 
 @media (max-width: 480px) {
     .paciente-actions {
         flex-direction: column;
+        gap: 5px;
     }
     
     .btn {
@@ -641,18 +580,33 @@ footer {
     .form-cadastro {
         padding: 20px;
     }
+    
+    .logo-placeholder {
+        font-size: 20px;
+    }
+    
+    .logo-placeholder .logo-img {
+        height: 32px;
+    }
+    
+    header {
+        padding: 12px 15px;
+    }
 }
 
-
-.logo-placeholder {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+input:focus, 
+select:focus, 
+button:focus, 
+textarea:focus {
+    outline: none;
 }
 
-.logo-placeholder .logo-img {
-    height: 38px;
-    width: auto;
-    vertical-align: middle;
-    border-radius: 6px;
+.btn,
+.paciente-item,
+.form-input-large,
+.form-input-medium,
+.form-input-small,
+.pesquisa-group input,
+.filtros-group select {
+    transition: all 0.3s ease;
 }
