@@ -313,6 +313,12 @@ h2 {
     font-weight: 500;
 }
 
+#reminder-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Espaço entre os lembretes */
+}
+
 .col-concluido { text-align: center; }
 .col-action { text-align: center; }
 
@@ -458,6 +464,11 @@ textarea {
     background-color: #5a9fa8;
 }
 
+.day-separator {
+    margin-top: 30px;
+    border-top: 3px solid rgba(255,255,255,0.4);
+    padding-top: 15px;
+}
 
 /* -- Ajustes Responsivos para o Conteúdo -- */
 @media (max-width: 768px) {
@@ -493,4 +504,12 @@ textarea {
     .toggle-group {
         justify-content: space-between; /* Espaçar "Todo Dia" do toggle */
     }
+
+    .reminder-item {
+    margin-bottom: 12px; /* espaço entre os lembretes */
+    }
+    
+
+
+
 }

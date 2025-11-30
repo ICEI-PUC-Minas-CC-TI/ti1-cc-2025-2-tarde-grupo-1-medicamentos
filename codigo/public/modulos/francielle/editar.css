@@ -44,10 +44,26 @@
     font-size: 16px;
   }
 
-  button:hover {
-    background-color: #45a049;
+  .salvar-button {
+    background-color: #3d9b98;
+    transition: 0.5s;
   }
 
+    .salvar-button:hover {
+    background-color: #1d6865;
+    transform: scale(1.05);
+  }
+
+  .voltar-button {
+    background-color: #777;
+    margin-left: 10px;
+    transition: 0.5s;
+  }
+
+    .voltar-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
   .back-link {
     display: block;
     text-align: center;
