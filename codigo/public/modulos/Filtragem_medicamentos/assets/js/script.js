@@ -24,7 +24,6 @@ async function pegarmedicamentos() {
             console.log(`processando medicamentos ${index}: `, med);
 
 
-            // No script.js, modifique a parte que gera os cards:
             lista += `
             <a href="detalhes.html?id=${med.id}">
                 <section class="card">
@@ -127,7 +126,7 @@ async function carregarDadosParaEdicao(id) {
         doseInput.value = med.dose;
         intervaloInput.value = med.intervalo;
         doseEmbalagemInput.value = med.dosePorEmbalagem;
-        tipoInput.value = med.tipo || ''; // NOVO CAMPO
+        tipoInput.value = med.tipo || '';
         editIdInput.value = id;
 
         formButton.textContent = "Salvar Alterações";
