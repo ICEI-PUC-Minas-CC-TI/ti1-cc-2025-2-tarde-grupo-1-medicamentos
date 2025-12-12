@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuidaMed - Cadastro de Médicos</title>
+    <link rel="stylesheet" href="./assets/css/style_medicos.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <img src="../../assets/images/logoTI.png" alt="cuidaMedIcon">
+        </a>
+
+        <nav class="menu-container" id="nav-menu">
+            <button id="btn-fechar-menu" class="btn-fechar-menu-mobile">×</button>
+            <ul>
+                <li class="menu-item"><a href="../../index.html">Inicio</a></li>
+                <li class="menu-item"><a href="#">Cadastros▾</a>
+                    <ul>
+                        <li><a href="../CRUD_pacientes/cadastro-pacientes.html">Pacientes</a></li>
+                        <li><a href="./medicos.html">Medicos</a></li>
+                        <li><a href="../CRUD - Lembretes/lembretes.html">Lembretes</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Medicamentos▾</a>
+                    <ul>
+                        <li><a href="../medicamentos/meus-medicamentos.html">Gerenciar Medicamentos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Menu do Usuário▾</a>
+                    <ul>
+                        <li><a href="../login/login.html" id="link-login-logout">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons-container">
+            <div class="container-pesquisa">
+                <button class="btn-abrir-pesquisa" id="btn-abrir-pesquisa">
+                    <img src="../../assets/images/lupa (1).png" alt="search">
+                </button>
+                <div class="overlay-pesquisa" id="overlay-pesquisa">
+                    <div class="barra-pesquisa-grande">
+                        <div class="cabecalho-pesquisa">
+                            <input type="text" placeholder="Pesquisar medicamentos..." id="input-pesquisa">
+                            <button class="btn-fechar" id="btn-fechar-pesquisa">×</button>
+                        </div>
+                        <div class="resultados-pesquisa" id="resultados-pesquisa"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="../../assets/images/sino.png" alt="notifications">
+            <p>A</p>
+        </div>
+
+        <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu">
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+        </button>
+    </header>
+
+    <main class="page-content">
+        <h1 class="page-title">Cadastro de Médicos</h1>
+
+        <section class="doctor-form-container">
+            <input type="hidden" id="edit-id">
+            <form id="form-cadastro-medico">
+                <div class="form-header">
+                    <button type="button" class="btn-novo" id="btn-novo">NOVO</button>
+                </div>
+
+                <div class="input-group">
+                    <label for="nome-medico">Nome Completo:</label>
+                    <input type="text" id="nome-medico" placeholder="Digite o nome completo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group half-width">
+                        <label for="idade-medico">Idade:</label>
+                        <input type="number" id="idade-medico" placeholder="Ex: 30" required>
+                    </div>
+
+                    <div class="input-group half-width">
+                        <label for="contato-medico">Contato:</label>
+                        <input type="text" id="contato-medico" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="input-group half-width">
+                        <label for="especialidade-medico">Especialidade:</label>
+                        <select id="especialidade-medico" required>
+                            <option value="">Selecione</option>
+                            <option value="Cardiologista">Cardiologista</option>
+                            <option value="Neurologista">Neurologista</option>
+                            <option value="Clínico Geral">Clínico Geral</option>
+                            <option value="Pediatra">Pediatra</option>
+                            <option value="Dermatologista">Dermatologista</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="btn-submit">Cadastrar</button>
+                    <button type="button" class="btn-voltar" id="btn-voltar">Voltar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="doctor-form-container">
+        </section>
+
+        <section class="search-and-filters">
+            <div class="search-group">
+                <input type="text" id="pesquisar-nome" placeholder="Pesquisar por nome...">
+                <button class="btn-pesquisar">Pesquisar</button>
+            </div>
+            <div class="filters-group">
+                <select id="filtro-especialidade">
+                    <option value="Todos">Todas as especialidades</option>
+                    <option value="Cardiologista">Cardiologista</option>
+                    <option value="Neurologista">Neurologista</option>
+                    <option value="Clínico Geral">Clínico Geral</option>
+                    <option value="Pediatra">Pediatra</option>
+                    <option value="Dermatologista">Dermatologista</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                <select id="ordenar-nome">
+                    <option value="Todas">Todos os nomes</option>
+                    <option value="Nome_ASC">Ordenar por nome (A-Z)</option>
+                    <option value="Nome_DESC">Ordenar por nome (Z-A)</option>
+                    <option value="Idade_ASC">Ordenar por idade (Crescente)</option>
+                    <option value="Idade_DESC">Ordenar por idade (Decrescente)</option>
+                </select>
+                <select id="filtro-idade">
+                    <option value="Todas">Todas as idades</option>
+                    <option value="Ate_30">Até 30 anos</option>
+                    <option value="De_31_a_50">31 a 50 anos</option>
+                    <option value="Mais_50">Mais de 50 anos</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="doctors-list-container">
+        </section>
+
+        <section class="doctors-list-container">
+            <h2>Médicos Cadastrados (<span id="count-medicos">0</span>)</h2>
+            <div id="doctors-list">
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <p class="doctor-name">Dr. João Silva</p>
+                        <div class="details-row">
+                            <span class="detail-icon">👤</span>
+                            <span class="detail-age">55 anos</span>
+                            <span class="detail-contact">(31) 98765-4321</span>
+                            <span class="detail-specialty specialty-cardio">Cardiologista</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-edit" data-id="1">✏️</button>
+                        <button class="action-delete" data-id="1">❌</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; CuidaMed - 2025 - Todos os Direitos Reservados
+        </p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <!-- <script src="../../assets/js/script.js"></script> -->
+    
+    <script src="../../assets/js/login.js"></script>
+    <script src="../../assets/js/pesquisa.js"></script>
+    <script src="../../assets/js/notificacao.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            iniciarMenuMobile();
+            pegarMedicos();
+        });
+    </script>
+</body>
+
+</html>

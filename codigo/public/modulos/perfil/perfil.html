@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - CuidaMed</title>
+    
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+    <link rel="stylesheet" href="assets/css/style_perfil.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../../../index.html">
+            <img src="../../../assets/images/logoTI.png" alt="CuidaMed">
+        </a>
+        <nav class="menu-container">
+            <ul>
+                <li><a href="../../../index.html">Voltar para Home</a></li>
+            </ul>
+        </nav>
+        <div class="icons-container">
+            <p id="user-avatar">A</p>
+            </div>
+    </header>
+
+    <main>
+        <div class="perfil-container">
+            <h2>Meu Perfil</h2>
+            <p style="margin-bottom: 20px; color: #666;">Gerencie suas informações pessoais.</p>
+            
+            <form id="form-perfil">
+                <div class="form-group">
+                    <label for="perfil-nome">Nome Completo</label>
+                    <input type="text" id="perfil-nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil-email">E-mail</label>
+                    <input type="email" id="perfil-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil-login">Login (Usuário)</label>
+                    <input type="text" id="perfil-login" class="readonly-field" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil-senha">Senha</label>
+                    <input type="text" id="perfil-senha" required>
+                </div>
+
+                <button type="submit" class="btn-salvar">Salvar Alterações</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; CuidaMed - 2025</p>
+    </footer>
+
+    <script src="../../../assets/js/login.js"></script>
+    
+    <script src="assets/js/perfil.js"></script>
+</body>
+</html>

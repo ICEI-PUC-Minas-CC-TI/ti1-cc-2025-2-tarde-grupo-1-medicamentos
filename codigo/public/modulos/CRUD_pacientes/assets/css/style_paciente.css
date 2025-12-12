@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#modulo-pacientes {
+    font-family: "Montserrat", sans-serif;
+    color: #4a5568;
+    width: 100%;
+}
+
+#modulo-pacientes .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff !important; 
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+#modulo-pacientes h1 {
+    color: #69B7BF;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+#modulo-pacientes .form-container {
+    margin-bottom: 40px;
+    background-color: #ffffff !important;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    display: block; 
+}
+
+#modulo-pacientes .form-header {
+    width: 100%;
+    background: #69B7BF;
+    padding: 18px 25px;
+}
+
+#modulo-pacientes .form-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#modulo-pacientes .form-cadastro {
+    padding: 30px;
+}
+
+#modulo-pacientes .form-section {
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+#modulo-pacientes .section-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+#modulo-pacientes .form-row-inline {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#modulo-pacientes input[type="text"],
+#modulo-pacientes input[type="number"],
+#modulo-pacientes input[type="tel"],
+#modulo-pacientes select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fdfdfd;
+    transition: all 0.3s ease;
+    color: #4a5568;
+    height: auto; 
+}
+
+#modulo-pacientes input:focus,
+#modulo-pacientes select:focus {
+    outline: none;
+    border-color: #69B7BF;
+    box-shadow: 0 0 0 3px rgba(105, 183, 191, 0.15);
+    background-color: white;
+}
+
+
+#modulo-pacientes .filtros-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #edf2f7;
+    padding-top: 25px;
+}
+
+#modulo-pacientes .pesquisa-group {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    width: 100%;
+}
+
+#modulo-pacientes .filtros-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+#modulo-pacientes .form-buttons-simple {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+#modulo-pacientes .btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    border: none;
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#modulo-pacientes .btn-cadastrar { background-color: #69B7BF; }
+#modulo-pacientes .btn-cadastrar:hover { background-color: #539ea6; }
+
+#modulo-pacientes .btn-warning { background-color: #F6AD55; color: white; }
+#modulo-pacientes .btn-warning:hover { background-color: #ED8936; }
+
+#modulo-pacientes .btn-secondary,
+#modulo-pacientes .btn-voltar { background-color: #69B7BF; color: white !important; }
+#modulo-pacientes .btn-secondary:hover { background-color: #718096 !important; }
+
+#modulo-pacientes .btn-search {
+    background-color: #69B7BF;
+    min-width: auto;
+    width: auto;
+    flex: 0;
+    white-space: nowrap;
+    padding: 10px 20px;
+}
+
+
+#modulo-pacientes .pacientes-lista {
+    margin-top: 25px;
+}
+
+#modulo-pacientes .lista-container {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    min-height: 120px;
+    border: 1px dashed #cbd5e0;
+}
+
+#modulo-pacientes .lista-vazia {
+    text-align: center;
+    color: #718096;
+    padding: 30px;
+    font-style: italic;
+}
+
+
+#modulo-pacientes .paciente-card {
+    background-color: #ffffff !important; 
+    padding: 20px 25px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    border-left: 5px solid #69B7BF;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block; 
+}
+
+#modulo-pacientes .paciente-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#modulo-pacientes .paciente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modulo-pacientes .paciente-header h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#modulo-pacientes .paciente-actions {
+    display: flex;
+    gap: 8px;
+}
+
+#modulo-pacientes .btn-icon {
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+#modulo-pacientes .btn-edit { background: #F6E05E; color: #744210; }
+#modulo-pacientes .btn-delete { background: #FC8181; color: white; }
+
+#modulo-pacientes .paciente-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #edf2f7;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#modulo-pacientes .info-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #4a5568;
+    font-weight: 500;
+    min-height: 40px;
+}
+
+#modulo-pacientes .info-item:nth-child(1) {
+    background-color: #ebf8ff;
+    border-color: #bee3f8;
+    color: #2b6cb0;
+    font-weight: 600;
+}
+
+
+@media (min-width: 768px) {
+    #modulo-pacientes .filtros-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #modulo-pacientes .filtros-group {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #modulo-pacientes .container { padding: 20px; }
+    #modulo-pacientes .form-cadastro { padding: 20px; }
+    #modulo-pacientes .form-row-inline { flex-direction: column; gap: 15px; }
+    #modulo-pacientes .filtros-group, 
+    #modulo-pacientes .pesquisa-group { flex-direction: column; }
+    #modulo-pacientes .btn { width: 100%; max-width: none; }
+}

@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #69B7BF;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+header>a>img {
+    width: 60px;
+}
+
+.menu-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container>ul {
+    display: flex;
+    background-color: #69B7BF;
+    justify-content: center;
+}
+
+.menu-container a {
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    display: none;
+    z-index: 10;
+}
+
+.menu-item ul>li>a {
+    color: #69B7BF;
+}
+
+.menu-item:hover>ul {
+    display: block;
+    font-weight: 500;
+}
+
+.icons-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons-container img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icons-container p {
+    font-size: 17px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger-linha {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(1) {
+    transform: translateY(11.5px) rotate(45deg);
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger.aberto .hamburger-linha:nth-child(3) {
+    transform: translateY(-11.5px) rotate(-45deg);
+}
+
+.page-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ecf3f4;
+}
+
+.page-title {
+    color: #69B7BF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #69B7BF;
+    padding-bottom: 5px;
+}
+
+.doctor-form-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#form-cadastro-medico {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    background-color: #69B7BF;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+.btn-novo {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: default;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#nome-medico {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.form-row .input-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.form-row input, .form-row select {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.input-group input, .input-group select {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-submit {
+    background-color: #69B7BF;
+    color: #fff;
+}
+
+#btn-submit:hover {
+    background-color: #4f9ba3;
+}
+
+.btn-voltar {
+    background-color: #adb5bd;
+    color: #fff;
+}
+
+.btn-voltar:hover {
+    background-color: #9099a1;
+}
+.search-and-filters {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.search-group {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+#pesquisar-nome {
+    flex-grow: 1;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.btn-pesquisar {
+    background-color: #69B7BF;
+    color: #fff;
+    height: 35px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pesquisar:hover {
+    background-color: #4f9ba3;
+}
+
+.filters-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters-group select {
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.doctors-list-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.doctors-list-container h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.doctor-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.details-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.detail-icon {
+    font-size: 18px;
+}
+.detail-specialty { 
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #a4e4a4;
+    color: #1a5e1a;
+}
+
+.card-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.card-actions button {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.action-edit {
+    background-color: #fee75c;
+    border: 1px solid #d4c04e;
+}
+
+.action-edit:hover {
+    opacity: 0.8;
+}
+
+.action-delete {
+    background-color: #ff8585;
+    border: 1px solid #e06c6c;
+}
+
+.action-delete:hover {
+    opacity: 0.8;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69B7BF;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #5E848C;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-container.menu-aberto {
+        display: flex;
+    }
+
+    .menu-container>ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-container a {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item ul {
+        position: static;
+        border: none;
+        background-color: #69B7BF;
+        min-width: 100%;
+    }
+
+    .menu-item ul li a {
+        color: #595958;
+        font-weight: 500;
+    }
+
+    .menu-item:hover>ul {
+        display: block;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .search-and-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-group {
+        width: 100%;
+    }
+
+    .filters-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filters-group select {
+        flex-grow: 1;
+        min-width: 30%;
+    }
+
+    .doctor-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .details-row {
+        flex-wrap: wrap;
+    }
+    
+    .card-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

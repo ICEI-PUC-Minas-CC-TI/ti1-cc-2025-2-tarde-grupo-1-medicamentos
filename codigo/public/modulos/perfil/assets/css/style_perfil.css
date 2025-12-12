@@ -1,0 +1,53 @@
+
+.perfil-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-salvar {
+    background-color: #69B7BF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-salvar:hover {
+    background-color: #4f9ba3;
+}
+
+.readonly-field {
+    background-color: #f8f9fa;
+    color: #777;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+}

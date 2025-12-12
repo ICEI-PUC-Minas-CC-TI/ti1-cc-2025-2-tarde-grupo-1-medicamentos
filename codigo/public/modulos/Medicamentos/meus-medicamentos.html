@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuidaMed | Gerenciar Medicamentos</title>
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/notificacao.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html">
+            <img src="../../assets/images/logoTI.png" alt="cuidaMedIcon">
+        </a>
+
+        <nav class="menu-container" id="nav-menu">
+            <button id="btn-fechar-menu" class="btn-fechar-menu-mobile">×</button>
+            <ul>
+                <li class="menu-item"><a href="../../index.html">Inicio</a></li>
+                <li class="menu-item"><a href="#">Cadastros▾</a>
+                    <ul>
+                        <li><a href="../CRUD_pacientes/cadastro-pacientes.html">Pacientes</a></li>
+                        <li><a href="../CRUD Medicos/medicos.html">Medicos</a></li>
+                        <li><a href="../CRUD - Lembretes/lembretes.html">Lembretes</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Medicamentos▾</a>
+                    <ul>
+                        <li><a href="./meus-medicamentos.html">Gerenciar Medicamentos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Menu do Usuário▾</a>
+                    <ul>
+                        <li><a href="#" id="link-login-logout">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons-container">
+            <div class="container-pesquisa">
+                <button class="btn-abrir-pesquisa" id="btn-abrir-pesquisa">
+                    <img src="../../assets/images/lupa (1).png" alt="search">
+                </button>
+                <div class="overlay-pesquisa" id="overlay-pesquisa">
+                    <div class="barra-pesquisa-grande">
+                        <div class="cabecalho-pesquisa">
+                            <input type="text" placeholder="Pesquisar medicamentos..." id="input-pesquisa">
+                            <button class="btn-fechar" id="btn-fechar-pesquisa">×</button>
+                        </div>
+                        <div class="resultados-pesquisa" id="resultados-pesquisa"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notification-area">
+                <img src="../../assets/images/sino.png" alt="notifications" id="notification-icon">
+                <span class="notification-badge" id="notification-count" style="display:none;">0</span>
+
+                <div class="notification-dropdown" id="notification-dropdown">
+                    <h3>Notificações não lidas</h3>
+                    <div class="notification-list" id="notification-list">
+                        <div class="notification-item">
+                            <p class="notification-content">Carregando lembretes...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="user-name-display">A</p>
+        </div>
+
+        <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu">
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+        </button>
+    </header>
+
+    <main>
+        <div class="medicamentos-content">
+            <div class="header-medicamentos">
+                <h1>Gerenciar Todos os Medicamentos</h1>
+            </div>
+
+            <div class="card-titles">
+                <span class="t-check">Status</span> 
+                <span class="t-horario">Intervalo</span>
+                <span class="t-nome">Nome</span>
+                <span class="t-dose">Dose</span>
+                <span class="t-acoes">Ações</span>
+            </div>
+
+            <div class="card-container-wrapper">
+                <div class="card-container">
+                    </div>
+            </div>
+
+            <section class="form-container">
+                <input type="hidden" id="edit-id">
+                <form id="form-cadastro">
+                    <h2>Cadastrar / Editar Medicamento</h2>
+                    
+                    <div class="form-inputs-row" style="grid-template-columns: 1.5fr 0.8fr 1fr 1fr 1fr;"> 
+                        <div><input type="text" id="nome" placeholder="Nome" required></div>
+                        <div><input type="text" id="dose" placeholder="Dose (ex: 50mg)" required></div>
+                        <div>
+                            <select id="intervalo" required>
+                                <option value="">Intervalo</option>
+                                <option value="4 em 4 horas">4/4 horas</option>
+                                <option value="6 em 6 horas">6/6 horas</option>
+                                <option value="8 em 8 horas">8/8 horas</option>
+                                <option value="12 em 12 horas">12/12 horas</option>
+                                <option value="24 em 24 horas">1 vez ao dia</option>
+                            </select>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 5px; background: white; padding: 0 10px; border-radius: 5px; border: 1px solid #ccc; height: 45px;">
+                            <input type="checkbox" id="usoDiarioInput" style="width: 20px; height: 20px; margin: 0;">
+                            <label for="usoDiarioInput" style="font-size: 12px; cursor: pointer; line-height: 1.2;">Exibir<br>na Home</label>
+                        </div>
+
+                        <div class="file-input-container">
+                            <label for="imagemInput" class="custom-file-upload">📷 Foto</label>
+                            <input type="file" id="imagemInput" accept="image/*">
+                            <img id="preview-imagem" src="" style="display:none;">
+                        </div>
+                    </div>
+
+                    <div class="container-buttons">
+                        <button type="submit" id="btn-submit">Salvar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/pesquisa.js"></script>
+    <script src="../../assets/js/detalhes.js"></script>
+    <script src="../../assets/js/notificacao.js"></script>
+    <script src="../../assets/js/login.js"></script>
+</body>
+</html>
