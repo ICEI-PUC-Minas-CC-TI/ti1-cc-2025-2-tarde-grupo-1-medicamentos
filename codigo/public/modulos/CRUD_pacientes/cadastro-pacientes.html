@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pacientes - CuidaMed</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style_paciente.css"> 
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html">
+            <img src="../../assets/images/logoTI.png" alt="cuidaMedIcon">
+        </a>
+
+        <nav class="menu-container" id="nav-menu">
+            <button id="btn-fechar-menu" class="btn-fechar-menu-mobile">×</button>
+            <ul>
+                <li class="menu-item"><a href="../../index.html">Inicio</a></li>
+                <li class="menu-item"><a href="#">Cadastros▾</a>
+                    <ul>
+                        <li><a href="./cadastro-pacientes.html">Pacientes</a></li>
+                        <li><a href="../CRUD Medicos/medicos.html">Medicos</a></li>
+                        <li><a href="../CRUD - Lembretes/lembretes.html">Lembretes</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Medicamentos▾</a>
+                    <ul>
+                        <li><a href="../medicamentos/meus-medicamentos.html">Gerenciar Medicamentos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Menu do Usuário▾</a>
+                    <ul>
+                        <li><a href="../login/login.html" id="link-login-logout">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons-container">
+            <div class="container-pesquisa">
+            <button class="btn-abrir-pesquisa" id="btn-abrir-pesquisa">
+                <img src="../../assets/images/lupa (1).png" alt="search">
+            </button> 
+            <div class="overlay-pesquisa" id="overlay-pesquisa">
+                <div class="barra-pesquisa-grande">
+                    <div class="cabecalho-pesquisa">
+                        <input type="text" placeholder="Pesquisar medicamentos..." id="input-pesquisa">
+                        <button class="btn-fechar" id="btn-fechar-pesquisa">×</button>
+                    </div>
+                    <div class="resultados-pesquisa" id="resultados-pesquisa"></div>
+                </div>
+            </div>
+        </div>
+            <img src="../../assets/images/sino.png" alt="notifications">
+            <p>A</p>
+        </div>
+
+        <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu">
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+            <span class="hamburger-linha"></span>
+        </button>
+    </header>
+
+    <main class="cadastro-main" id="modulo-pacientes" style="padding: 20px;">
+        <div class="container">
+            <h1>Cadastro de Pacientes</h1>
+
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Novo</h2>
+                </div>
+                
+                <form id="form-paciente" class="form-cadastro">
+                    <input type="hidden" id="paciente-id">
+                    
+                    <div class="form-section">
+                        <label for="nome" class="section-label">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required class="form-input-large" placeholder="Digite o nome completo" style="width: 100%; padding: 8px;">
+                    </div>
+
+                    <div class="form-row-inline">
+                        <div class="form-section">
+                            <label for="idade" class="section-label">Idade:</label>
+                            <input type="number" id="idade" name="idade" required class="form-input-small" placeholder="Ex: 30" min="0" max="150">
+                        </div>
+
+                        <div class="form-section">
+                            <label for="contato" class="section-label">Contato:</label>
+                            <input type="tel" id="contato" name="contato" required class="form-input-medium" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <div class="form-section">
+                            <label for="tipo" class="section-label">Tipo:</label>
+                            <select id="tipo" name="tipo" required class="form-input-medium">
+                                <option value="">Selecione</option>
+                                <option value="pessoa">Pessoa</option>
+                                <option value="dependente">Dependente</option>
+                                <option value="idoso">Idoso</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons-simple" style="margin-top: 20px;">
+                        <button type="button" id="btn-inserir" class="btn btn-cadastrar">Cadastrar</button>
+                        <button type="button" id="btn-atualizar" class="btn btn-warning" style="display: none;">Atualizar</button>
+                        <button type="button" id="btn-cancelar" class="btn btn-secondary" style="display: none;">Cancelar</button>
+                        <button type="button" id="btn-voltar" class="btn btn-voltar">Voltar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="filtros-container" style="margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px;">
+                <div class="pesquisa-group" style="margin-bottom: 15px;">
+                    <input type="text" id="input-pesquisa-pacientes" placeholder="Pesquisar por nome..." style="padding: 8px; width: 60%;">
+                    <button type="button" id="btn-pesquisar" class="btn btn-search">🔍 Pesquisar</button>
+                </div>
+                
+                <div class="filtros-group">
+                    <select id="filtro-tipo">
+                        <option value="">Todos os tipos</option>
+                        <option value="pessoa">Pessoa</option>
+                        <option value="dependente">Dependente</option>
+                        <option value="idoso">Idoso</option>
+                    </select>
+                    
+                    <select id="ordenacao">
+                        <option value="nome">Ordenar por Nome</option>
+                        <option value="idade">Ordenar por Idade</option>
+                        <option value="tipo">Ordenar por Tipo</option>
+                    </select>
+
+                    <select id="filtro-idade">
+                        <option value="">Todas as idades</option>
+                        <option value="crianca">Criança (0-12)</option>
+                        <option value="adolescente">Adolescente (13-17)</option>
+                        <option value="adulto">Adulto (18-59)</option>
+                        <option value="idoso">Idoso (60+)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pacientes-lista" style="margin-top: 20px;">
+                <h2>Pacientes Cadastrados <span id="contador-pacientes" class="contador">(0)</span></h2>
+                <div id="lista-pacientes" class="lista-container">
+                    <div class="lista-vazia">Carregando...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background: #f0f0f0;">
+        <div class="footer-content">
+            <p>&copy; 2025 CuidaMed - Sistema de Saúde</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/cadastro-pacientes.js"></script>
+    <script src="../../assets/js/pesquisa.js"></script>
+    <script src="../../assets/js/detalhes.js"></script>
+    <script src="../../assets/js/notificacao.js"></script>
+    <script src="../../assets/js/login.js"></script>
+</body>
+</html>

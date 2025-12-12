@@ -1,0 +1,87 @@
+
+:root {
+    --cor-principal: #3aafa9; 
+    --cor-secundaria: #def2f1;
+    --cor-texto: #17252a; 
+    --cor-fundo-login: #3aafa9;
+    --cor-botao-primario: #3aafa9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+#login-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--cor-botao-primario);
+    color: white;
+}
+
+#grid-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#grid-usuarios th, #grid-usuarios td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#grid-usuarios th {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+#grid-usuarios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
