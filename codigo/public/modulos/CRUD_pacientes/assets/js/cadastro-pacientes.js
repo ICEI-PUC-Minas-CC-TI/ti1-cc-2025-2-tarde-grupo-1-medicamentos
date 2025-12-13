@@ -1,5 +1,5 @@
 
-const API_URL = '/pacientes';
+const API_URL = '';
 
 let pacientes = [];
 let editandoId = null;
