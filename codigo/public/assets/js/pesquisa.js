@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function buscarMedicamentos(termo) {
         try {
-            const resposta = await fetch('http://localhost:3000/medicamentos');
+            const resposta = await fetch('/medicamentos');
             const medicamentos = await resposta.json();
 
             const resultadosFiltrados = medicamentos.filter(med => {

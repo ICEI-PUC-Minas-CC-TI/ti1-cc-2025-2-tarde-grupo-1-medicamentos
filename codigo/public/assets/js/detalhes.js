@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/medicamentos";
+const API_URL = "/medicamentos";
 
 document.addEventListener('DOMContentLoaded', function () {
     carregarDetalhesMedicamento();

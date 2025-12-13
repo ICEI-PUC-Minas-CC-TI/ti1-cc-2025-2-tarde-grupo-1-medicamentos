@@ -14,7 +14,7 @@ const filtroEspecialidadeSelect = document.getElementById("filtro-especialidade"
 const ordenarNomeSelect = document.getElementById("ordenar-nome");
 const filtroIdadeSelect = document.getElementById("filtro-idade");
 
-let API_URL = "http://localhost:3000/medicos";
+let API_URL = "/medicos";
 let todosMedicos = []; 
 
 function iniciarMenuMobile() {

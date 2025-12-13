@@ -9,7 +9,7 @@ const editIdInput = document.getElementById("edit-id");
 const formButton = document.getElementById("btn-submit");
 const usoDiarioInput = document.getElementById("usoDiarioInput");
 
-let API_URL = "http://localhost:3000/medicamentos";
+let API_URL = "/medicamentos";
 let imagemPreviewAtual = ""; 
 
 function iniciarMenuMobile() {

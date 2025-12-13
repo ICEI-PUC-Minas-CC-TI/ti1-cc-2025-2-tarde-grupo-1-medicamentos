@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarAutenticacaoPerfil();
 });
 
-const API_URL_USUARIOS_PERFIL = 'http://localhost:3000/usuarios';
+const API_URL_USUARIOS_PERFIL = '/usuarios';
 
 function verificarAutenticacaoPerfil() {
     const usuarioSalvo = sessionStorage.getItem('usuarioCorrente');

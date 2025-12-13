@@ -1,4 +1,4 @@
-const API_URL_USUARIOS = 'http://localhost:3000/usuarios';
+const API_URL_USUARIOS = '/usuarios';
 
 var db_usuarios = [];
 var usuarioCorrente = {};

@@ -8,7 +8,7 @@ const textAreaInput = document.getElementById("textArea");
 const editIdInput = document.getElementById("edit-id"); 
 const formButton = document.getElementById("btnSalvar"); 
 
-let API_URL = "http://localhost:3000/lembretes";
+let API_URL = "/lembretes";
 
 function formatarDataHora(isoString) {
     if (!isoString) return '';

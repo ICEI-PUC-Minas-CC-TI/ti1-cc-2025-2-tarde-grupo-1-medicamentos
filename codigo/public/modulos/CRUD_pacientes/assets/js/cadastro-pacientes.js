@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:3000';
+const API_URL = '/pacientes';
 
 let pacientes = [];
 let editandoId = null;

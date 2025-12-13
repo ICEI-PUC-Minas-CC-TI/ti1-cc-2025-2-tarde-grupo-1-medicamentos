@@ -5,7 +5,7 @@ const notificationList = document.getElementById('notification-list');
 const notificationCount = document.getElementById('notification-count');
 const notificationSound = document.getElementById('notification-sound'); 
 
-const API_URL_LEMBRETES = "http://localhost:3000/lembretes";
+const API_URL_LEMBRETES = "/lembretes";
 let alarmesDisparados = new Set(); 
 
 async function carregarNotificacoes() {
