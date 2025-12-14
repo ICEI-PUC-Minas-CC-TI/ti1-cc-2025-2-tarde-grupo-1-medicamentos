@@ -187,13 +187,24 @@ Estes são os protótipos de telas do sistema.
 [Prototipo Interativo](https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1)
 
 # Metodologia
-Divisão de papéis: 
+Metodologia de Desenvolvimento do Projeto: Gerenciamento e Controle de Medicamentos
+O projeto foi conduzido por meio de uma abordagem híbrida, integrando o Design Thinking para a fase de concepção e metodologias Ágeis para a execução técnica. A estruturação do trabalho foi dividida em três pilares fundamentais que garantiram a organização do grupo e a entrega final.
 
-Kaio e Thiago- Projeto de Interface. 
+1. Processo de Design e Planejamento O grupo utilizou o Miro para as etapas de entendimento e definição, onde foram criadas as personas Joana e Carlos e os mapas de valor. Essa fase foi essencial para alinhar os objetivos do projeto às dores reais dos pacientes e cuidadores. O design da interface foi validado através de Wireframes e de um Protótipo Interativo de alta fidelidade desenvolvido no Figma, garantindo que a usabilidade fosse intuitiva antes do início da programação.
 
-Savyo e Gabriel- Documentação.
+2. Gestão de Tarefas e Colaboração Para a organização do fluxo de trabalho, o grupo adotou o sistema Kanban integrado ao GitHub Projects. As tarefas foram divididas entre os membros e monitoradas conforme seu status de progresso (A fazer, Em andamento e Concluído). O repositório no GitHub serviu como base centralizada para o código-fonte, enquanto ferramentas como Render foram utilizadas para a hospedagem do sistema e o MarvelApp para testes de fluxo de usuário.
 
-Francielle- Slide.
+3. Divisão de Funções e Atribuições da Equipe A execução técnica foi distribuída de forma a garantir que todas as funcionalidades essenciais (CRUDs) e materiais de apoio fossem concluídos com qualidade:
+
+Savyo Henio Martins Teixeira: Responsável pelo desenvolvimento do CRUD e apresentação de Pacientes, além de realizar a redação e estruturação de toda a Documentação Completa do projeto.
+
+Thiago Ferreira Santos de Deus: Atuou no desenvolvimento do CRUD e apresentação de Medicamentos. Teve papel fundamental na integração das páginas do sistema e na criação de protótipos interativos.
+
+Kaio Ferreira Dias: Responsável pelo CRUD e apresentação de Lembretes. Trabalhou ativamente na parte técnica para garantir que todas as páginas do site funcionassem juntas de forma coesa, além de colaborar nos projetos interativos.
+
+Francielle de Souza Lana: Desenvolveu o CRUD e apresentação de Médicos. Foi a responsável pela criação dos Slides Completos do projeto e pela produção e edição do Vídeo de Apresentação do site.
+
+4. Tecnologias Empregadas A solução foi construída utilizando tecnologias web padrão para garantir portabilidade e desempenho. O front-end foi desenvolvido com HTML5, CSS3 e Bootstrap 4, utilizando jQuery para comportamentos dinâmicos. A persistência e estruturação de dados foram feitas via JSON. Para a identidade visual, foram utilizadas fontes do Font Awesome e imagens do Unsplash, resultando em um produto final que atende aos requisitos funcionais e de design propostos no início do cronograma.
 
 
 ## Ferramentas
@@ -230,7 +241,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
+[![Vídeo do projeto](images/video.png)](https://youtu.be/WaApb5k9AWM?si=qY-B4CnCUrUhWvMY)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
