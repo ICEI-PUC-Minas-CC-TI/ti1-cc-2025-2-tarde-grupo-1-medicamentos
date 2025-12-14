@@ -212,7 +212,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
+![Exemplo de Kanban](images/Kanban.png)
 
 > **Orientações**:
 >
@@ -249,11 +249,388 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Procure pela lupa e click
+  * Em seguida, pesquise o remedio que quer achar
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/busca.png)
+
+##### Funcionalidade 2 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos]("lembretes": [
+    {
+      "id": "1",
+      "medicamentoId": 1,
+      "titulo": "Tomar Losartana 50mg",
+      "conteudo": "Tomar 1 comprimido pela manhã em jejum.",
+      "dataHora": "2025-11-15T08:00:00",
+      "todoDia": true,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "2",
+      "medicamentoId": 2,
+      "titulo": "Consulta Dr. House",
+      "conteudo": "Levar exames de sangue.",
+      "dataHora": "2025-11-14T15:00:00",
+      "todoDia": false,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "3",
+      "medicamentoId": 3,
+      "titulo": "Tomar Ibuprofeno",
+      "conteudo": "Tomar às 10:00 - Ibuprofeno 400mg",
+      "dataHora": "2025-11-15T10:00:00",
+      "todoDia": true,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "4",
+      "medicamentoId": 1,
+      "titulo": "Tomar Losartana 50mg (Antigo)",
+      "conteudo": "Tomar 1 comprimido pela manhã.",
+      "dataHora": "2025-11-14T08:00:00",
+      "todoDia": true,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "5",
+      "medicamentoId": 4,
+      "titulo": "Comprar remédio de pressão",
+      "conteudo": "Farmácia Pacheco - Receita está na carteira.",
+      "dataHora": "2025-11-17T18:00:00",
+      "todoDia": false,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "6",
+      "medicamentoId": 3,
+      "titulo": "Tomar Ibuprofeno",
+      "conteudo": "Tomar às 10:00 - Ibuprofeno 400mg",
+      "dataHora": "2024-09-20T10:00:00",
+      "todoDia": true,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "8",
+      "medicamentoId": 4,
+      "titulo": "Tomar Omeprazol",
+      "conteudo": "Tomar às 07:00 - Omeprazol 20mg (antes do café)",
+      "dataHora": "2024-09-21T07:00:00",
+      "todoDia": false,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    },
+    {
+      "id": "1354",
+      "titulo": "TESTE notificação",
+      "conteudo": "TESTE notificação",
+      "dataHora": "2025-12-08T13:40",
+      "todoDia": false,
+      "check": true,
+      "status": "concluido",
+      "idPessoa": 1
+    }
+  ],)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, procure por lembretes
+  * acesse, outra aba vai abrir e voce cria seu novo lembrete la
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/cadastro_lembretes.png)
+
+##### Funcionalidade 3 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](
+  "medicos": [
+    {
+      "nome": "João Oliveira",
+      "idade": "38",
+      "contato": "(31) 97777-3333",
+      "especialidade": "Cardiologista",
+      "status": "ativo",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Ana Beatriz Lima",
+      "idade": 32,
+      "contato": "(31) 96666-4444",
+      "email": "ana.lima@clinica.com",
+      "especialidade": "Dermatologista",
+      "status": "ativo"
+    },
+    {
+      "id": "3",
+      "nome": "Ricardo Fernandes",
+      "idade": 50,
+      "contato": "(31) 95555-5555",
+      "email": "ricardo.fernandes@clinica.com",
+      "especialidade": "Ortopedista",
+      "status": "ativo"
+    },
+    {
+      "id": "4",
+      "nome": "Luísa Carvalho",
+      "idade": 29,
+      "contato": "(31) 94444-6666",
+      "email": "luisa.carvalho@clinica.com",
+      "especialidade": "Pediatra",
+      "status": "ativo"
+    },
+    {
+      "id": "5",
+      "nome": "Felipe Rocha",
+      "idade": 41,
+      "contato": "(31) 93333-7777",
+      "email": "felipe.rocha@clinica.com",
+      "especialidade": "Neurologista",
+      "status": "ativo"
+    }
+  ],)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, procure por medicos
+  * acesse, outra aba vai abrir e voce cadastra seu novo medico e olha outros ja cadastrados
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/cadastro_medicos.png)
+
+##### Funcionalidade 4 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos]("pacientes": [
+    {
+      "id": "1",
+      "nome": "Lucas Rosa",
+      "idade": 35,
+      "contato": "(31) 99786-9864",
+      "tipo": "pessoa",
+      "dataCadastro": "2025-01-15T10:30:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "2",
+      "nome": "Maria Silva Santos",
+      "idade": 28,
+      "contato": "(11) 98765-4321",
+      "tipo": "pessoa",
+      "dataCadastro": "2025-01-14T14:20:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "3",
+      "nome": "João Pedro Oliveira",
+      "idade": 72,
+      "contato": "(21) 97654-3210",
+      "tipo": "idoso",
+      "dataCadastro": "2025-01-13T09:15:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "4",
+      "nome": "Ana Claudia Mendes",
+      "idade": 8,
+      "contato": "(31) 99456-7890",
+      "tipo": "dependente",
+      "dataCadastro": "2025-01-12T16:45:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "5",
+      "nome": "Carlos Eduardo Lima",
+      "idade": 45,
+      "contato": "(47) 98877-6655",
+      "tipo": "pessoa",
+      "dataCadastro": "2025-01-11T11:20:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "6",
+      "nome": "Fernanda Costa",
+      "idade": 15,
+      "contato": "(19) 97766-5544",
+      "tipo": "dependente",
+      "dataCadastro": "2025-01-10T13:10:00.000Z",
+      "ativo": true
+    },
+    {
+      "nome": "Algustos Lima Dias",
+      "idade": 27,
+      "contato": "(31) 94965-0965",
+      "tipo": "pessoa",
+      "dataCadastro": "2025-10-28T18:44:43.643Z",
+      "ativo": true,
+      "id": "8"
+    }
+  ],)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, procure por pacientes
+  * acesse, outra aba vai abrir e voce cadastra seu novo paciente e olha outros ja cadastrados
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/cadastro_pacientes.png)
+
+##### Funcionalidade 4 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos]("medicamentos": [
+    {
+      "nome": "Ibuprofeno 400mg",
+      "dose": "420mg",
+      "intervalo": "8 em 8 horas",
+      "doseEmbalagem": "undefined",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio8.png",
+      "check": false,
+      "id": "3"
+    },
+    {
+      "nome": "Amoxicilina 500mg",
+      "dose": "500mg",
+      "intervalo": "12 em 12 horas",
+      "doseEmbalagem": "undefined",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio7.png",
+      "check": false,
+      "id": "4"
+    },
+    {
+      "nome": "Losartana 50mg",
+      "dose": "100mg",
+      "intervalo": "8 em 8 horas",
+      "doseEmbalagem": "undefined",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio6.png",
+      "check": false,
+      "id": "5"
+    },
+    {
+      "nome": "Paracetamol 750mg",
+      "dose": "750mg",
+      "intervalo": "8 em 8 horas",
+      "doseEmbalagem": "undefined",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio5.png",
+      "check": false,
+      "id": "6"
+    },
+    {
+      "id": "7",
+      "nome": "Dipirona 1g",
+      "dose": "1g",
+      "intervalo": "6 em 6 horas",
+      "usoDiario": true,
+      "dosePorEmbalagem": 10,
+      "status": "ativo",
+      "tipo": "Analgésico",
+      "imagem": "/images/produtos/Remedio4.png"
+    },
+    {
+      "nome": "Sinvastatina 20mg",
+      "dose": "20mg",
+      "intervalo": "24 em 24 horas",
+      "doseEmbalagem": "undefined",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio3.png",
+      "check": false,
+      "id": "8"
+    },
+    {
+      "id": "9",
+      "nome": "Omeprazol 20mg",
+      "dose": "20mg",
+      "intervalo": "24 em 24 horas",
+      "usoDiario": true,
+      "dosePorEmbalagem": 28,
+      "status": "ativo",
+      "tipo": "Antiácido",
+      "imagem": "/images/produtos/Remedio2.png",
+      "check": false
+    },
+    {
+      "nome": "Metformina 850mg",
+      "dose": "850mg",
+      "intervalo": "12 em 12 horas",
+      "doseEmbalagem": "2",
+      "usoDiario": true,
+      "imagem": "/images/produtos/Remedio1.png",
+      "check": false,
+      "id": "10"
+    }
+  ],)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção medicamentos
+  * Em seguida, procure por gerenciamentos de medicamentos
+  * acesse, outra aba vai abrir e voce cadastra seu novo medicamentos e olha outros ja cadastrados
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/gerenciamentos_medicamentos.png)
+
+##### Funcionalidade 6 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * a primeira tela sera sua rotina
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/rotina.png)
+
+##### Funcionalidade 7 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * procure o sino a direita em cima
+  * e click para ver suas notificaçoes e le,bretes
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/sino.png)
+
+##### Funcionalidade 8 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Menu de usuario
+  * Em seguida, escolha a opção Meu perfil
+  * click e la estara suas informaçoes
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/meu_perfil.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -271,13 +648,14 @@ Contatos da aplicação
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
+    
+    {
+      "id": "a772",
+      "nome": "Kaio",
+      "login": "Kaio",
+      "senha": "admin",
+      "email": "kaio@cuidamed.com"
+    }
   }
   
 ```
@@ -288,12 +666,37 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+    {
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "id": "3"
+    },
+    {
+      "id": "a772",
+      "nome": "Kaio",
+      "login": "Kaio",
+      "senha": "admin",
+      "email": "kaio@cuidamed.com"
+    }
+  ],}
   }
 ```
 
