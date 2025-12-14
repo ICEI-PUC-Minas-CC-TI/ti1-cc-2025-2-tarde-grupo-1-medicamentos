@@ -734,7 +734,29 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 # Referências
 
-SILVA, Anderson Lourenço da; RIBEIRO, Andréia Queiroz; KLEIN, Carlos Henrique; ACURCIO, Francisco de Assis. Cadernos de Saúde Pública, Rio de Janeiro, v. 28, n. 6, p. 1033–1045, jun. 2012. Disponível em: https://www.scielo.br/j/csp/a/pDL9xpBNsSgqFfFBGPPYZhH/?format=html&lang=pt
+11 PASSOS Essenciais para Implantar Scrum no seu Projeto. In: Mind Master. Disponível em: https://mindmaster.com.br/scrum-11-passos/. Acesso em: 14 dez. 2025.
+
+ABOUT Projects - GitHub Docs. In: GitHub Docs. Disponível em: https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects. Acesso em: 14 dez. 2025.
+
+BOOTSTRAP 4. [S. l.]: Twitter. Disponível em: http://getbootstrap.com/. Acesso em: 14 dez. 2025.
+
+GESTÃO de projetos com GitHub. In: Balta.io. Disponível em: https://balta.io/blog/gestao-de-projetos-com-github. Acesso em: 14 dez. 2025.
+
+GITHUB Projects. [S. l.]: YouTube. Disponível em: https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H. Acesso em: 14 dez. 2025.
+
+GRUPO 1. Documentação de Design Thinking. 2025. 1 arquivo PDF (Processo de Design Thinking - MIRO). Disponível em: <files/processo-dt.pdf>. Acesso em: 14 dez. 2025.
+
+GRUPO 1. Protótipo interativo. [S. l.]: Figma, 2025. Disponível em: https://www.figma.com/design/9vAScLPPNvRJOHgSjFIglA/Prot%C3%B3tipo-interativo?node-id=1-249&t=yJJNLRsgRAvY8vq2-1. Acesso em: 14 dez. 2025.
+
+ICONS Font Face. In: Font Awesome. Disponível em: https://fontawesome.com/. Acesso em: 14 dez. 2025.
+
+JQUERY. [S. l.]. Disponível em: http://www.jquery.com/. Acesso em: 14 dez. 2025.
+
+SAVYO, H. M. T. et al. Gerenciament e Controle de Medicamentos. [S. l.]: GitHub, 2025. Disponível em: https://github.com/ICEI-PUC-Minas-CC-TI/ti1-cc-2025-2-tarde-grupo-1-medicamentos.git. Acesso em: 14 dez. 2025.
+
+SCRUM em 9 minutos. [S. l.]: YouTube, 2025. Disponível em: https://www.youtube.com/watch?v=XfvQWnRgxG0. Acesso em: 14 dez. 2025.
+
+UNSPLASH. [S. l.]: Unsplash. Disponível em: https://unsplash.com/. Acesso em: 14 dez. 2025.
 
 > **Orientações**:
 >
